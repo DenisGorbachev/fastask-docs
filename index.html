@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Call To Action - Fastask</title>
+        <title>Intro - Zenbox</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="CallToAction.html"><strong aria-hidden="true">1.</strong> Call To Action</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="CallToAction.html"><strong aria-hidden="true">2.</strong> Call To Action</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -111,7 +111,7 @@
                         </button>
                                             </div>
 
-                    <h1 class="menu-title">Fastask</h1>
+                    <h1 class="menu-title">Zenbox</h1>
 
                     <div class="right-buttons">
                                                 <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -143,31 +143,103 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="call-to-action"><a class="header" href="#call-to-action">Call to action</a></h1>
-<p>We make decisions to take actions. Therefore:</p>
+                        <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
+<p>Zenbox is a personal productivity suite. It helps you focus on a single task by auto-sorting your tasks from external apps (text messengers, email servers, issue trackers, playbooks, CRMs). You can customize the sorting algorithm via settings, or rewrite it completely using TypeScript.</p>
+<p>Zenbox doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Zenbox starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue (so you would see it only after completing other tasks).</p>
+<p>Zenbox allows users to submit task results. The system saves the results, then sends them to external systems. For example, if the task were &quot;Reply to email&quot;, the system would expect the task result to be the email answer, and it would send the answer on user's behalf. This allows to use Zenbox as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).</p>
+<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
-<li>Decisions are descriptions of what actions to take.</li>
-<li>Decisions are lists of instructions.</li>
-<li>Decisions are programs.</li>
+<li>You save time by <em>not</em> choosing the next task (the system sorts the tasks automatically by the time of arrival).</li>
+<li>You are motivated to skip procrastinating &amp; start working on the task (otherwise the system would start &amp; stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).</li>
+<li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
 </ul>
-<p>This realization has profound implications for programmers:</p>
-<ol>
-<li>We can make decisions by writing programs. We just need to learn how to write decision-specific programs in our favorite programming language.</li>
-<li>We can use any Turing-complete programming language. We just need to choose a language which simplifies making decisions (more on that later).</li>
-<li>We can mix human instructions with computer instructions. We just need to use a special interpreter to run programs with a mixed instruction set.</li>
-</ol>
-<p>The ability to write mixed programs for humans/computers is very powerful:</p>
-<ol>
-<li>We can build companies by writing code. We can automate setting tasks for employees, validating their work results, collecting money from customers &amp; distributing money to employees. This is possible today - there are APIs for setting tasks &amp; sending money. We just need to make decisions about the parameters of the API requests.</li>
-<li>We can build governments by writing code. We can automate setting tasks for government officials, verifying their work results, collecting taxes from some citizens &amp; distributing taxes to some other citizens. We can also require the laws to be expressed as theorems, which must be proven by axioms (the Constitution).</li>
-</ol>
-<p>Excited? So am I. <a href="https://t.me/+bh7QVp6RLEhjZDZi">Join our group</a> to ask questions &amp; learn to use this power of making decisions by writing programs.</p>
+<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
+<p>Zenbox system can be used by a single person with just a timer + self-discipline. For teams, Zenbox can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up connectors to external task sources.</p>
+<h2 id="api"><a class="header" href="#api">API</a></h2>
+<ul>
+<li><code>push</code> - add a task to the queue
+<ul>
+<li>Inputs:
+<ul>
+<li>Task push token (JWT string) (includes username)</li>
+<li>Task description (JSON string)</li>
+</ul>
+</li>
+<li>Output:
+<ul>
+<li>Task pull token (JWT string)</li>
+</ul>
+</li>
+<li>Default implementation
+<ul>
+<li>Add a new task &quot;Implement a handler for task&quot; to a FIFO queue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>pull</code> - remove an task from the queue
+<ul>
+<li>Inputs:
+<ul>
+<li>Task pull token (JWT string)</li>
+</ul>
+</li>
+<li>Output:
+<ul>
+<li>Success status (bool)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get</code> - get a task
+<ul>
+<li>Inputs: none</li>
+<li>Output:
+<ul>
+<li>Task description (JSON string)</li>
+</ul>
+</li>
+<li>Default implementation
+<ul>
+<li>If task queue is not empty: Return the task from the queue</li>
+<li>If unreviewed task results queue is not empty: Return the task &quot;Review a task result&quot;</li>
+<li>Return the task &quot;Automate the task type&quot;
+<ul>
+<li>Choose the task type by statistics (most incomplete tasks first)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Notes
+<ul>
+<li><code>get</code> command opens a text editor for making a set of changes to the system code
+<ul>
+<li>The user sees the default code (respond with an empty string) pre-written in the editor</li>
+<li>The user can freely edit the code</li>
+<li>The user can save the new code only if it passes the typechecker</li>
+<li>The user can close the editor if the current code has been saved (&quot;complete the task early&quot;)</li>
+<li>The editor will self-close after a timeout (can be adjusted as a separate task at the end of the day)</li>
+</ul>
+</li>
+<li>The user can react to the task in the following ways:
+<ul>
+<li>Provide a direct response</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                                                    <a rel="next" href="CallToAction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -176,6 +248,9 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                                    <a rel="next" href="CallToAction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
