@@ -144,92 +144,11 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
-<p>Zenbox is a personal productivity suite. It helps you focus on a single task by auto-sorting your tasks from external apps (text messengers, email servers, issue trackers, playbooks, CRMs). You can customize the sorting algorithm via settings, or rewrite it completely using TypeScript.</p>
-<p>Zenbox doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Zenbox starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue (so you would see it only after completing other tasks).</p>
-<p>Zenbox allows users to submit task results. The system saves the results, then sends them to external systems. For example, if the task were &quot;Reply to email&quot;, the system would expect the task result to be the email answer, and it would send the answer on user's behalf. This allows to use Zenbox as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).</p>
-<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
+<p>Zenbox is a personal productivity suite based on <a href="https://en.wikipedia.org/wiki/Theory_of_constraints">Theory of Constraints</a>. It contains the following components:</p>
 <ul>
-<li>You save time by <em>not</em> choosing the next task (the system sorts the tasks automatically by the time of arrival).</li>
-<li>You are motivated to skip procrastinating &amp; start working on the task (otherwise the system would start &amp; stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).</li>
-<li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
-</ul>
-<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
-<p>Zenbox system can be used by a single person with just a timer + self-discipline. For teams, Zenbox can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up connectors to external task sources.</p>
-<h2 id="api"><a class="header" href="#api">API</a></h2>
-<ul>
-<li><code>push</code> - add a task to the queue
-<ul>
-<li>Inputs:
-<ul>
-<li>Task push token (JWT string) (includes username)</li>
-<li>Task description (JSON string)</li>
-</ul>
-</li>
-<li>Output:
-<ul>
-<li>Task pull token (JWT string)</li>
-</ul>
-</li>
-<li>Default implementation
-<ul>
-<li>Add a new task &quot;Implement a handler for task&quot; to a FIFO queue</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>pull</code> - remove an task from the queue
-<ul>
-<li>Inputs:
-<ul>
-<li>Task pull token (JWT string)</li>
-</ul>
-</li>
-<li>Output:
-<ul>
-<li>Success status (bool)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>get</code> - get a task
-<ul>
-<li>Inputs: none</li>
-<li>Output:
-<ul>
-<li>Task description (JSON string)</li>
-</ul>
-</li>
-<li>Default implementation
-<ul>
-<li>If task queue is not empty: Return the task from the queue</li>
-<li>If unreviewed task results queue is not empty: Return the task &quot;Review a task result&quot;</li>
-<li>Return the task &quot;Automate the task type&quot;
-<ul>
-<li>Choose the task type by statistics (most incomplete tasks first)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Notes
-<ul>
-<li><code>get</code> command opens a text editor for making a set of changes to the system code
-<ul>
-<li>The user sees the default code (respond with an empty string) pre-written in the editor</li>
-<li>The user can freely edit the code</li>
-<li>The user can save the new code only if it passes the typechecker</li>
-<li>The user can close the editor if the current code has been saved (&quot;complete the task early&quot;)</li>
-<li>The editor will self-close after a timeout (can be adjusted as a separate task at the end of the day)</li>
-</ul>
-</li>
-<li>The user can react to the task in the following ways:
-<ul>
-<li>Provide a direct response</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="./Slice.html">Slice</a> - time management system</li>
+<li><a href="./Tmesg.html">Tmesg</a> - task management system</li>
+<li><a href="./Playbook.html">Playbook</a> - project management system</li>
 </ul>
 
                     </main>
