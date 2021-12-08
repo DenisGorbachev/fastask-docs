@@ -1,4 +1,4 @@
-# OnTime drafts
+# Zenbox drafts
 
 * How to choose event feeds?
   * Options
