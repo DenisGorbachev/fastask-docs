@@ -1,4 +1,4 @@
-# Call to action
+# Decisions
 
 We make decisions to take actions. Therefore:
 

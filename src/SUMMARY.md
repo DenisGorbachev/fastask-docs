@@ -1,4 +1,8 @@
 # Summary
 
-- [Intro](./Intro.md)
-- [Call To Action](./CallToAction.md)
+[Intro](./Intro.md)
+[Decisions](./CallToAction.md)
+
+- [Slice](./Slice.md)
+- [Tmesg](./Tmesg.md)
+- [Playbook](./Playbook.md)
