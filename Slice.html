@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Intro - Zenbox</title>
+        <title>Slice - Zenbox</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><a href="CallToAction.html">Decisions</a></li><li class="chapter-item expanded "><a href="Slice.html"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><a href="CallToAction.html">Decisions</a></li><li class="chapter-item expanded "><a href="Slice.html" class="active"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,20 +143,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
-<p>Zenbox is a personal productivity suite based on <a href="https://en.wikipedia.org/wiki/Theory_of_constraints">Theory of Constraints</a>. It contains the following components:</p>
+                        <h1 id="slice"><a class="header" href="#slice">Slice</a></h1>
+<p>Slice is a time-management system. It helps you focus on a single task by auto-sorting your tasks from external apps (text messengers, email servers, issue trackers, playbooks, CRMs) integrated via <a href="./Tmesg.html">Tmesg</a>. You can customize the sorting algorithm via settings, or rewrite it completely using TypeScript.</p>
+<p>Slice doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Slice starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue (so you would see it only after completing other tasks).</p>
+<p>Slice requires you to associate each time interval with a <a href="./definitions/TaskStream.html">task stream</a>. During that time interval, you will only see tasks from this stream.</p>
+<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
-<li><a href="./Slice.html">Slice</a> - time management system</li>
-<li><a href="./Tmesg.html">Tmesg</a> - task management system</li>
-<li><a href="./Playbook.html">Playbook</a> - project management system</li>
+<li>You save time by <em>not</em> choosing the next task (the system sorts the tasks automatically by the time of arrival).</li>
+<li>You are motivated to skip procrastinating &amp; start working on the task (otherwise the system would start &amp; stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).</li>
+<li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
 </ul>
+<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
+<p>Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="./Tmesg.html">Tmesg</a> to source the tasks from external apps.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="CallToAction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
-                                                    <a rel="next" href="CallToAction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="Tmesg.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -166,8 +174,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="CallToAction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
-                                    <a rel="next" href="CallToAction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="Tmesg.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
