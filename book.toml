@@ -1,0 +1,6 @@
+[book]
+authors = ["Denis Gorbachev"]
+language = "en"
+multilingual = true
+src = "src"
+title = "Fastask"
