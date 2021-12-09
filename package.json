@@ -1,0 +1,14 @@
+{
+  "name": "zenbox-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DenisGorbachev/zenbox-docs.git",
+  "author": "Denis Gorbachev <829578+DenisGorbachev@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint:markdown": "markdownlint --fix --ignore node_modules **/*.md"
+  },
+  "dependencies": {
+    "markdownlint-cli": "^0.30.0"
+  }
+}
