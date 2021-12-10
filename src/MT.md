@@ -1,10 +1,12 @@
 # Maker-Taker
 
-Maker-Taker is a pair of fundamental algorithms that guide the development of new algorithms. It minimizes the total development time by instructing developers to implement partial algorithms, and telling them how to extend existing partial algorithms to cover a larger part of its input domain.
+Maker-Taker is a pair of fundamental algorithms that guide the development of new algorithms. They minimize the total development time by instructing developers to implement partial algorithms, and telling them how to extend existing partial algorithms to cover a larger part of its input domain.
 
-Maker-Taker is based on an important observation: "In practice, an executor will never experience every possible input of its algorithm". In other words: there is always some obscure input that won't be seen by the executor. This is true for every algorithm with an infinite input domain (for example: the `add` algorithm, which has an infinite input domain of natural number pairs, will every see every possible natural number pair).
+Maker-Taker is based on an important observation: "In practice, an algorithm will never experience its every possible input". In other words: there is always some obscure input that won't be seen by the algorithm. This is true for every algorithm with an infinite input domain (for example: the `add` algorithm, which has an infinite input domain of natural number pairs, will every see every possible natural number pair).
 
-Instead of every possible input, the executor will see some specific inputs between the timestamps `t0` and `t1`. Maker-Taker generates the list of specific inputs that will be seen by the executor based on previous execution statistics and the axiom of smoothness (which states that the probability of seeing a new input depends on the probability of seeing a previous input that is "close to" the new input - where "close to" depends on the type of input).
+Instead of every possible input, the algorithm will see some specific inputs between the timestamps `t0` and `t1`. Maker-Taker generates the list of specific inputs that will be seen by the algorithm based on previous execution statistics and the axiom of smoothness (which states that the probability of seeing a new input depends on the probability of seeing a previous input that is "close to" the new input - where "close to" depends on the type of input).
+
+---
 
 We can refer to this fundamental property of an executor as "incompleteness" (in a tribute to [Gödel's incompleteness theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems) 
 
