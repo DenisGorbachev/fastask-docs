@@ -109,10 +109,3 @@ Properties:
 Space is a group of points.
 
 The grouping is done by creating a path between Every point from a single space has a path to a single point in the space of spaces.
-
-## The Tale of Programming
-
-A child is born. She is looking at the world, progressively refining her understanding through *distinctions*.
-
-* Everything splits into nothing and something (true and false - booleans are born).
-* Something splits into moments on a timeline (0, 1, 2, ... - numbers are born)
