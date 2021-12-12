@@ -43,35 +43,126 @@ Instead of every possible input, the function will see some specific inputs betw
 * Parentheses allow to group the words into phrases (informally: "(add 2 2)" is treated as a word)
 * Yeah, it's a LISP.
 
-### Snap
+### Dict
 
-Snap ("static function map") is a list of input-output pairs, where both input and output is a phrase.
+Dict (or "dictionary", or "static map", or "associative array") is a list of pairs where:
+
+* The first element is the input phrase.
+* The second element is the output phrase.
+
+Alternatively:
+
+* The first element is the name.
+* The second element is the meaning of the name.
+
+Alternatively:
+
+* The first element is the pointer.
+* The second element is the value.
+
+The input and output phrase are not equal syntactically, but they are equal semantically: after the function is applied, the input becomes equal to output.
 
 #### Examples
 
-* Example 1
-  * (add 1 1) 2
-  * (add 1 2) 3
-  * (add 2 2) 4
-* Example 2
-  * a 1
-  * ab 2
-  * abc 3
-* Example 3
-  * 1 1
-  * 2 1
-  * 3 2
-  * 4 3
-  * 5 5
-  * 6 8
-* Example 4
-  * 0 zero
-  * 1 (next zero)
-  * 2 (next (next zero))
-  * 3 (next (next (next zero)))
+Example dict for `add` function:
 
-### Body
+```
+(1 1) 2
+(3 5) 8
+(7 7) 14
+```
 
-Body (or "implementation") is a list of phrases that describes a "snap" in a general way.  In other words: 
+Example dict for `evaluate` function:
+
+```
+(add 1 1) 2
+(add 3 5) 8
+(add 7 7) 14
+```
+
+Example dict for `length` function:
+
+```
+"a" 1
+"ab" 2
+"abc" 3
+```
+
+Example dict for `get_function_body` function (see also: [Add function evaluation]):
+
+```
+add (
+      ~match~
+      $1
+      (
+        (
+          zero
+          $2
+        )
+        (
+          (next @1)
+          (add @1 (next $2))
+        )
+      )
+    )
+```
+
+Example dict for `fibonacci` function:
+
+```
+0 1
+1 1
+2 2
+3 3
+4 5
+5 8
+6 13
+7 21
+```
+
+Example dict for `number_to_expression` function:
+
+```
+0 zero
+1 (next zero)
+2 (next (next zero))
+3 (next (next (next zero)))
+```
+
+### Content
+
+Content (or "body", or "implementation") is a list of phrases that describes a "snap" for a specific executor.
+
+In other words: 
 * An interpreter can read the body, read the snap inputs, write the snap outputs
 * A compiler can read the body and write a program that can read the snap inputs and write the snap outputs
+
+### Type
+
+Type is a phrase that describes another phrase.
+
+Type can be implemented as a producer function:
+
+* Input: a list of existing type elements (can be an empty list)
+* Output: a list of existing type elements appended to a list of new type elements
+
+Type can be implemented as a reducer function:
+
+* Input: a phrase to be typechecked
+* Output: if the input passes the typecheck, then an empty phrase, else a non-empty phrase
+
+## FAQ
+
+### How can I write a program for a human?
+
+A human is a probabilistic executor: the same input may yield different outputs. This is because your input is not the only input that is being read at the same time. Furthermore, the input depends on the history of the execution.
+
+Every text in a natural language is a program for a human.
+
+To write a *correct* program for a human (that is, a program that produces an expected result)
+
+You need to write a program in a formal language that outputs a 
+
+### How can I write & test a program that influences the world state probabilistically?
+
+Every program influences the world state 

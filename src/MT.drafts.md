@@ -32,7 +32,7 @@ Func's basic type is a term trees.
 
 Func is a program that outputs a single task for a software developer based on the current state of his code. Func doesn't require any configuration.
 
-Func is a fully automated task tracker : specialized task manager for software developers. an algorithm for writing functions. Func generates the tasks for the developer based on the current code. Each task has a form "Define output based on a) input b) output type".
+Func is a fully automated task tracker : specialized task manager for software developers. an algorithm for writing functions. Func generates the tasks for the developer based on the current code. Each task has a form "Define output based on 1. input 2. output type".
 
 Main ideas:
 * Allow multiple input-output pairs for a single input
