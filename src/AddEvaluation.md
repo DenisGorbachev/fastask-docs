@@ -38,7 +38,7 @@ add (next (next zero)) (next zero)
 (next (next (next zero)))
 ```
 
-This is very different from the previous two examples - there's no obvious pattern. Let's summarize the examples into [a snap](MT.md#snap):
+This is very different from the previous two examples - there's no obvious pattern. Let's summarize the examples into [a dict](definitions/Dict.md):
 
 ```lisp
 (add zero zero)                         (zero)

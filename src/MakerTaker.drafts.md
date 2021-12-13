@@ -67,10 +67,10 @@ Main ideas:
     * Money
   * Probability of execution
 * Define meta-tasks (actions):
-  * Define output value based on input value & output type (label: DEVAL)
-  * Define function body based on list of input-output pairs (label: DEFUN)
+  * Define output value based on input value & output type (label: `DEVAL`)
+  * Define function body based on list of input-output pairs (label: `DEFUN`)
 * Define transitive meta-tasks:
-  * Redefine function body = DEVAL of function body
+  * Redefine function body = `DEVAL` of function body
 
 BASICALLY: Each name is a probability distribution over values.
 

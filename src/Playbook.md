@@ -1,6 +1,6 @@
 # Playbook
 
-Playbook is a project management system. It helps you to make decisions, verify them with simulations, send the tasks to [Tmesg](./Tmesg.md).
+Playbook is a project management system. It helps you to make decisions, verify them with simulations, send the tasks to [Tmesg](Tmesg.md).
 
 ## Benefits
 

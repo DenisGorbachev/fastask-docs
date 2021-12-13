@@ -1,13 +1,13 @@
 # Summary
 
-[Intro](./Intro.md)
+[Intro](Intro.md)
 
 # Systems
 
-- [Slice](./Slice.md)
-- [Tmesg](./Tmesg.md)
-- [Playbook](./Playbook.md)
-- [Maker-Taker](./MT.md)
+- [Slice](Slice.md)
+- [Tmesg](Tmesg.md)
+- [Playbook](Playbook.md)
+- [Maker-Taker](MakerTaker.md)
 
 # Definitions
 
@@ -19,4 +19,5 @@
 
 # Notes
 
-* [Decisions](./CallToAction.md)
+* [Words Are Voids](notes/WordsAreVoids.md)
+* [Decisions](notes/Decisions.md)

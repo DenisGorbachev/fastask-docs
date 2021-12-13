@@ -12,5 +12,5 @@
 ## Notes
 
 * Every word is also a phrase.
-* Parentheses allow to group the words into phrases (informally: "(add 2 2)" is treated as a word)
+* Parentheses allow to group the words into phrases (informally: `(add 2 2)` is treated as a word)
 * Yeah, it's a LISP.

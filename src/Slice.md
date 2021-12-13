@@ -2,11 +2,11 @@
 
 Slice is a time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Slice pushes it back into the queue & switches to the next task. You are motivated to produce a result that is imperfect but structurally complete (to avoid losing context).
 
-Slice maintains focus on a single task by merging tasks from [external apps](./Tmesg.md#data-source) into a single stream. You can setup multiple task streams: one per each dimension of your life (work, family, sport, ...).
+Slice maintains focus on a single task by merging tasks from [external apps](Tmesg.md#data-source) into a single stream. You can set up multiple task streams: one per each dimension of your life (work, family, sport, ...).
 
 Slice doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Slice starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it "rotates" to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue (so you would see it only after completing other tasks).
 
-Slice requires you to associate each time interval with a [task stream](./definitions/TaskStream.md). During that time interval, you will only see tasks from this stream.
+Slice requires you to associate each time interval with a [task stream](definitions/TaskStream.md). During that time interval, you will only see tasks from this stream.
 
 ## Benefits
 
@@ -16,7 +16,7 @@ Slice requires you to associate each time interval with a [task stream](./defini
 
 ## Implementation
 
-Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up [Tmesg](./Tmesg.md) to source the tasks from external apps.
+Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up [Tmesg](Tmesg.md) to source the tasks from external apps.
 
 ## FAQ
 
@@ -27,7 +27,7 @@ You can associate a specific time interval with a task stream that contains only
 ### How can I prioritize the tasks?
 
 1. You can prioritize a single task stream by increasing its time interval.
-2. You can autocomplete a task using [an autoresponder](./Tmesg.md#autoresponder).
+2. You can autocomplete a task using [an autoresponder](Tmesg.md#autoresponder).
 3. You can't prioritize a single task within a stream. This increases your total productivity, because you will complete both the urgent tasks **and** the important tasks within a single task stream. It's important to work on important tasks, so Slice disallows manual prioritization (which is ).
 
 ### What should I do in an emergency?
