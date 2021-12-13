@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><a href="CallToAction.html">Decisions</a></li><li class="chapter-item expanded "><a href="Slice.html"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="Slice.html"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li><li class="chapter-item expanded "><a href="MT.html"><strong aria-hidden="true">4.</strong> Maker-Taker</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="CallToAction.html"><strong aria-hidden="true">10.</strong> Decisions</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -151,25 +151,6 @@
 <li><a href="./Tmesg.html">Tmesg</a> - task management system</li>
 <li><a href="./Playbook.html">Playbook</a> - project management system</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="decisions"><a class="header" href="#decisions">Decisions</a></h1>
-<p>We make decisions to take actions. Therefore:</p>
-<ul>
-<li>Decisions are descriptions of what actions to take.</li>
-<li>Decisions are lists of instructions.</li>
-<li>Decisions are programs.</li>
-</ul>
-<p>This realization has profound implications for programmers:</p>
-<ol>
-<li>We can make decisions by writing programs. We just need to learn how to write decision-specific programs in our favorite programming language.</li>
-<li>We can use any Turing-complete programming language. We just need to choose a language which simplifies making decisions (more on that later).</li>
-<li>We can mix human instructions with computer instructions. We just need to use a special interpreter to run programs with a mixed instruction set.</li>
-</ol>
-<p>The ability to write mixed programs for humans/computers is very powerful:</p>
-<ol>
-<li>We can build companies by writing code. We can automate setting tasks for employees, validating their work results, collecting money from customers &amp; distributing money to employees. This is possible today - there are APIs for setting tasks &amp; sending money. We just need to make decisions about the parameters of the API requests.</li>
-<li>We can build governments by writing code. We can automate setting tasks for government officials, verifying their work results, collecting taxes from some citizens &amp; distributing taxes to some other citizens. We can also require the laws to be expressed as theorems, which must be proven by axioms (the Constitution).</li>
-</ol>
-<p>Excited? So am I. <a href="https://t.me/+bh7QVp6RLEhjZDZi">Join our group</a> to ask questions &amp; learn to use this power of making decisions by writing programs.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="slice"><a class="header" href="#slice">Slice</a></h1>
 <p>Slice is a time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Slice pushes it back into the queue &amp; switches to the next task. You are motivated to produce a result that is imperfect but structurally complete (to avoid losing context).</p>
 <p>Slice maintains focus on a single task by merging tasks from <a href="./Tmesg.html#data-source">external apps</a> into a single stream. You can setup multiple task streams: one per each dimension of your life (work, family, sport, ...).</p>
@@ -299,6 +280,157 @@
 <li><strong>Change plans faster</strong>: each team member will be able to suggest a change to the plan by sending a pull request on GitHub.</li>
 <li><strong>Show your plans</strong>: each team member will be able to see the big picture (after a crash course in TypeScript 😈 )</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="maker-taker"><a class="header" href="#maker-taker">Maker-Taker</a></h1>
+<p>Maker-Taker is a pair of fundamental algorithms for guiding the software development. They minimize the total development time by instructing developers to implement partial functions, and telling them how to extend existing partial functions to cover a progressively larger part of their input domains.</p>
+<p>Maker-Taker is based on an important observation: &quot;In practice, a function will never receive its every possible input&quot;. In other words: there is always some obscure input that won't be seen by the function. This is true for every function with an infinite input domain (for example: the <code>add</code> function, which has an infinite input domain of pairs of natural numbers, will never see every possible pair of natural numbers).</p>
+<p>This fundamental property allows to split a complex task into simple tasks by splitting a total function into partial functions. Partial functions are easier to implement because they have smaller input domains. Maker-Taker generates new input domains from execution statistics and the axiom of continuity (which states that the probability of seeing a new input depends on the probability of seeing a previous input that is &quot;close to&quot; the new input).</p>
+<h2 id="definitions-1"><a class="header" href="#definitions-1">Definitions</a></h2>
+<ul>
+<li><a href="definitions/Word.html">Word</a></li>
+<li><a href="definitions/Phrase.html">Phrase</a></li>
+<li><a href="definitions/Type.html">Type</a></li>
+<li><a href="definitions/Dict.html">Dict</a></li>
+<li><a href="definitions/Def.html">Def</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="word"><a class="header" href="#word">Word</a></h1>
+<p><strong>Word</strong> is a list of characters without punctuation.</p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<ul>
+<li><code>main</code></li>
+<li><code>add</code></li>
+<li><code>42</code></li>
+<li><code>0</code></li>
+<li><code>+</code></li>
+<li><code>=</code></li>
+</ul>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<ul>
+<li>Punctuation characters are .,() and whitespace characters.</li>
+<li>In the context of context-free grammars, a word is called a symbol.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="phrase"><a class="header" href="#phrase">Phrase</a></h1>
+<p><strong>Phrase</strong> is either a single <a href="definitions/Word.html">word</a> or a list of phrases separated by whitespace.</p>
+<h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
+<ul>
+<li>main</li>
+<li>add 2 2</li>
+<li>add (add 1 1) 2</li>
+<li>= (add 2 2) 4</li>
+</ul>
+<h2 id="notes-1"><a class="header" href="#notes-1">Notes</a></h2>
+<ul>
+<li>Every word is also a phrase.</li>
+<li>Parentheses allow to group the words into phrases (informally: &quot;(add 2 2)&quot; is treated as a word)</li>
+<li>Yeah, it's a LISP.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="type"><a class="header" href="#type">Type</a></h1>
+<p>Type is a phrase that describes another phrase.</p>
+<p>Type can be defined as a list of constructors (&quot;actions&quot; in machine learning).</p>
+<p>Type can be defined as a producer function:</p>
+<ul>
+<li>Input: a list of existing type elements (can be an empty list)</li>
+<li>Output: a list of existing type elements appended to a list of new type elements</li>
+</ul>
+<p>Type can be defined as a reducer function:</p>
+<ul>
+<li>Input: a phrase to be typechecked</li>
+<li>Output: if the input passes the typecheck, then an empty phrase, else a non-empty phrase</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dict"><a class="header" href="#dict">Dict</a></h1>
+<p>Dict (or &quot;dictionary&quot;, or &quot;static map&quot;, or &quot;associative array&quot;) is a list of pairs where:</p>
+<ul>
+<li>The first element is the input <a href="definitions/Phrase.html">phrase</a>.</li>
+<li>The second element is the output <a href="definitions/Phrase.html">phrase</a>.</li>
+</ul>
+<p>Alternatively:</p>
+<ul>
+<li>The first element is the name.</li>
+<li>The second element is the meaning of the name.</li>
+</ul>
+<p>Alternatively:</p>
+<ul>
+<li>The first element is the pointer.</li>
+<li>The second element is the value.</li>
+</ul>
+<p>The input and output phrase are not equal syntactically, but they are equal semantically: after the function is applied, the input becomes equal to output.</p>
+<h2 id="examples-2"><a class="header" href="#examples-2">Examples</a></h2>
+<p>Example dict for <code>add</code> function:</p>
+<pre><code class="language-lisp">(1 1) 2
+(3 5) 8
+(7 7) 14
+</code></pre>
+<p>Example dict for <code>evaluate</code> function:</p>
+<pre><code class="language-lisp">(add 1 1) 2
+(add 3 5) 8
+(add 7 7) 14
+</code></pre>
+<p>Example dict for <code>length</code> function:</p>
+<pre><code class="language-lisp">&quot;a&quot; 1
+&quot;ab&quot; 2
+&quot;abc&quot; 3
+</code></pre>
+<p>Example dict for <code>get_function_body</code> function (see also: [Add function evaluation]):</p>
+<pre><code class="language-lisp">add (
+      ~match~
+      $1
+      (
+        (
+          zero
+          $2
+        )
+        (
+          (next @1)
+          (add @1 (next $2))
+        )
+      )
+    )
+</code></pre>
+<p>Example dict for <code>fibonacci</code> function:</p>
+<pre><code class="language-lisp">0 1
+1 1
+2 2
+3 3
+4 5
+5 8
+6 13
+7 21
+</code></pre>
+<p>Example dict for <code>number_to_expression</code> function:</p>
+<pre><code class="language-lisp">0 zero
+1 (next zero)
+2 (next (next zero))
+3 (next (next (next zero)))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="def"><a class="header" href="#def">Def</a></h1>
+<p>Def (or &quot;definition&quot;, &quot;implementation&quot;, &quot;body&quot;) is a list of phrases associated with a specific word. The executor should replace the word with its def when transforming the input into output.</p>
+<p>In other words:</p>
+<ul>
+<li>An executor may read the def and write a program that can read the <a href="definitions/Dict.html">dict</a> inputs and write the <a href="definitions/Dict.html">dict</a> outputs (= calculate outputs from inputs)</li>
+</ul>
+<h2 id="notes-2"><a class="header" href="#notes-2">Notes</a></h2>
+<ul>
+<li>Def is a general form of the dict</li>
+<li>Def depends on the executor, which interprets some words of the def in an executor-specific way</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="decisions"><a class="header" href="#decisions">Decisions</a></h1>
+<p>We make decisions to take actions. Therefore:</p>
+<ul>
+<li>Decisions are descriptions of what actions to take.</li>
+<li>Decisions are lists of instructions.</li>
+<li>Decisions are programs.</li>
+</ul>
+<p>This realization has profound implications for programmers:</p>
+<ol>
+<li>We can make decisions by writing programs. We just need to learn how to write decision-specific programs in our favorite programming language.</li>
+<li>We can use any Turing-complete programming language. We just need to choose a language which simplifies making decisions (more on that later).</li>
+<li>We can mix human instructions with computer instructions. We just need to use a special interpreter to run programs with a mixed instruction set.</li>
+</ol>
+<p>The ability to write mixed programs for humans/computers is very powerful:</p>
+<ol>
+<li>We can build companies by writing code. We can automate setting tasks for employees, validating their work results, collecting money from customers &amp; distributing money to employees. This is possible today - there are APIs for setting tasks &amp; sending money. We just need to make decisions about the parameters of the API requests.</li>
+<li>We can build governments by writing code. We can automate setting tasks for government officials, verifying their work results, collecting taxes from some citizens &amp; distributing taxes to some other citizens. We can also require the laws to be expressed as theorems, which must be proven by axioms (the Constitution).</li>
+</ol>
+<p>Excited? So am I. <a href="https://t.me/+bh7QVp6RLEhjZDZi">Join our group</a> to ask questions &amp; learn to use this power of making decisions by writing programs.</p>
 
                     </main>
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Slice - Zenbox</title>
+        <title>Maker-Taker - Zenbox</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="Slice.html" class="active"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li><li class="chapter-item expanded "><a href="MT.html"><strong aria-hidden="true">4.</strong> Maker-Taker</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="CallToAction.html"><strong aria-hidden="true">10.</strong> Decisions</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="Slice.html"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li><li class="chapter-item expanded "><a href="MT.html" class="active"><strong aria-hidden="true">4.</strong> Maker-Taker</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="CallToAction.html"><strong aria-hidden="true">10.</strong> Decisions</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,45 +143,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="slice"><a class="header" href="#slice">Slice</a></h1>
-<p>Slice is a time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Slice pushes it back into the queue &amp; switches to the next task. You are motivated to produce a result that is imperfect but structurally complete (to avoid losing context).</p>
-<p>Slice maintains focus on a single task by merging tasks from <a href="./Tmesg.html#data-source">external apps</a> into a single stream. You can setup multiple task streams: one per each dimension of your life (work, family, sport, ...).</p>
-<p>Slice doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Slice starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue (so you would see it only after completing other tasks).</p>
-<p>Slice requires you to associate each time interval with a <a href="./definitions/TaskStream.html">task stream</a>. During that time interval, you will only see tasks from this stream.</p>
-<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
+                        <h1 id="maker-taker"><a class="header" href="#maker-taker">Maker-Taker</a></h1>
+<p>Maker-Taker is a pair of fundamental algorithms for guiding the software development. They minimize the total development time by instructing developers to implement partial functions, and telling them how to extend existing partial functions to cover a progressively larger part of their input domains.</p>
+<p>Maker-Taker is based on an important observation: &quot;In practice, a function will never receive its every possible input&quot;. In other words: there is always some obscure input that won't be seen by the function. This is true for every function with an infinite input domain (for example: the <code>add</code> function, which has an infinite input domain of pairs of natural numbers, will never see every possible pair of natural numbers).</p>
+<p>This fundamental property allows to split a complex task into simple tasks by splitting a total function into partial functions. Partial functions are easier to implement because they have smaller input domains. Maker-Taker generates new input domains from execution statistics and the axiom of continuity (which states that the probability of seeing a new input depends on the probability of seeing a previous input that is &quot;close to&quot; the new input).</p>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
 <ul>
-<li>You save time by <em>not</em> choosing the next task (the system sorts the tasks automatically by the time of arrival).</li>
-<li>You are motivated to skip procrastinating &amp; start working on the task (otherwise the system would start &amp; stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).</li>
-<li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
+<li><a href="definitions/Word.html">Word</a></li>
+<li><a href="definitions/Phrase.html">Phrase</a></li>
+<li><a href="definitions/Type.html">Type</a></li>
+<li><a href="definitions/Dict.html">Dict</a></li>
+<li><a href="definitions/Def.html">Def</a></li>
 </ul>
-<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
-<p>Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="./Tmesg.html">Tmesg</a> to source the tasks from external apps.</p>
-<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
-<h3 id="how-can-i-set-my-rest-time"><a class="header" href="#how-can-i-set-my-rest-time">How can I set my rest time?</a></h3>
-<p>You can associate a specific time interval with a task stream that contains only one task: &quot;Rest&quot;. You're encouraged to take as much rest as you actually need.</p>
-<h3 id="how-can-i-prioritize-the-tasks"><a class="header" href="#how-can-i-prioritize-the-tasks">How can I prioritize the tasks?</a></h3>
-<ol>
-<li>You can prioritize a single task stream by increasing its time interval.</li>
-<li>You can autocomplete a task using <a href="./Tmesg.html#autoresponder">an autoresponder</a>.</li>
-<li>You can't prioritize a single task within a stream. This increases your total productivity, because you will complete both the urgent tasks <strong>and</strong> the important tasks within a single task stream. It's important to work on important tasks, so Slice disallows manual prioritization (which is ).</li>
-</ol>
-<h3 id="what-should-i-do-in-an-emergency"><a class="header" href="#what-should-i-do-in-an-emergency">What should I do in an emergency?</a></h3>
-<p>You can activate &quot;emergency mode&quot;. While it is active, Slice will add extra fields (customizable by you) to each default response.</p>
-<p>Slice will continue producing tasks. If you can't complete a task before timeout, Slice will send the default response.</p>
-<p>The &quot;emergency mode&quot; doesn't pause Slice, since the emergency task doesn't pause the time.</p>
-<h3 id="why-is-slice-so-harsh"><a class="header" href="#why-is-slice-so-harsh">Why is Slice so harsh?</a></h3>
-<p>No pain - no gain.</p>
-<p>However, you can <a href="#how-can-i-set-my-rest-time">increase the rest time</a>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="Intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="Playbook.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="Tmesg.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="definitions/Word.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -191,11 +174,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="Intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="Playbook.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="Tmesg.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="definitions/Word.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
