@@ -6,6 +6,8 @@
   "author": "Denis Gorbachev <829578+DenisGorbachev@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "mdbook serve",
+    "lint": "yarn lint:markdown",
     "lint:markdown": "markdownlint --fix --ignore node_modules **/*.md"
   },
   "dependencies": {
