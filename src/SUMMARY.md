@@ -16,6 +16,8 @@
 * [Type](definitions/Type.md)
 * [Dict](definitions/Dict.md)
 * [Def](definitions/Def.md)
+* [Task stream](definitions/TaskStream.md)
+* [Safe rename](definitions/SafeRename.md)
 
 # Notes
 
