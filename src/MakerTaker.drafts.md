@@ -1,6 +1,41 @@
 # Maker-Taker drafts
 
-## Main algorithm
+We can use a machine learning algorithm to teach the program to write programs.
+
+## Rosetta stone
+
+| Machine learning                  | Programming
+| -----------                       | -----------
+| State                             | Current code
+| Action                            | Modify the phrase (functionalize a constant, replace a variable, ...)
+| Reward function                   | Test
+
+## Main algorithm (2021-12-14)
+
+1. Define the question as a list of axioms (preconditions)
+   1. List of axioms must include at least one axiom that states the type of the variable
+   2. List of axioms must not include any axioms that are not given by the question ([see why](#no-axiom-for-output-type))
+5. Run a generator to build a list of lists of premises
+    1. Premises must include axioms
+    2. Premises may include additional constraints
+4. Define a validator function
+    1. Input: a pair of {list of premises, conclusion}
+    2. Output: boolean (true if correct, false if incorrect)
+6. ...
+7. Define the output as a phrase in a natural language.
+
+The "natural language" steps are only needed for communication with other humans who are not parsers.
+
+### No axiom for output type
+
+Example:
+1. You are given the question: "What is the root of the square equation `a*x^2 + b*x + c = 0`?"
+2. You are tempted to write the axiom: `answer has type "real"` (`answer: real`). However, if `a = 0` and `b = 0` and `c != 0`, the `answer` has type `absurd` (or "empty", "bottom"), because the equation reduces to `c = 0`, which contradicts the premise `c != 0`.
+3. You are tempted to write the axiom: `x has type "real"` (`x: real`). However, if `b = 0` and `sign(a) = sign(c)`, then `x` has type `complex`, because the equation reduces to `x = sqrt(-1 * c/a)`.
+
+Therefore, it's incorrect to assume the axioms that are not given by the question (axiomatize the type of any variable, including `answer`).
+
+## Main algorithm (2021-12-13)
 
 1. Define an output type as a list of constructors
 2. Define an input type as a list of constructors
