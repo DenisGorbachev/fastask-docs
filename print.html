@@ -310,18 +310,17 @@
 <li>In the context of context-free grammars, a word is called a symbol.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="phrase"><a class="header" href="#phrase">Phrase</a></h1>
-<p><strong>Phrase</strong> is either a single <a href="definitions/Word.html">word</a> or a list of phrases separated by whitespace.</p>
+<p><strong>Phrase</strong> is a list of elements separated by whitespace and enclosed in parentheses. Every element is either a <a href="definitions/Word.html">word</a> or a (nested) phrase.</p>
 <h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
 <ul>
-<li>main</li>
-<li>add 2 2</li>
-<li>add (add 1 1) 2</li>
-<li>= (add 2 2) 4</li>
+<li>(main)</li>
+<li>(add 2 2)</li>
+<li>(add (add 1 1) 2)</li>
+<li>(= (add 2 2) 4)</li>
+<li>()</li>
 </ul>
 <h2 id="notes-1"><a class="header" href="#notes-1">Notes</a></h2>
 <ul>
-<li>Every word is also a phrase.</li>
-<li>Parentheses allow to group the words into phrases (informally: <code>(add 2 2)</code> is treated as a word)</li>
 <li>Yeah, it's a LISP.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type"><a class="header" href="#type">Type</a></h1>

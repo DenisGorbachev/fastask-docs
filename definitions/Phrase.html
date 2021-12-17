@@ -144,18 +144,17 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="phrase"><a class="header" href="#phrase">Phrase</a></h1>
-<p><strong>Phrase</strong> is either a single <a href="Word.html">word</a> or a list of phrases separated by whitespace.</p>
+<p><strong>Phrase</strong> is a list of elements separated by whitespace and enclosed in parentheses. Every element is either a <a href="Word.html">word</a> or a (nested) phrase.</p>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <ul>
-<li>main</li>
-<li>add 2 2</li>
-<li>add (add 1 1) 2</li>
-<li>= (add 2 2) 4</li>
+<li>(main)</li>
+<li>(add 2 2)</li>
+<li>(add (add 1 1) 2)</li>
+<li>(= (add 2 2) 4)</li>
+<li>()</li>
 </ul>
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 <ul>
-<li>Every word is also a phrase.</li>
-<li>Parentheses allow to group the words into phrases (informally: <code>(add 2 2)</code> is treated as a word)</li>
 <li>Yeah, it's a LISP.</li>
 </ul>
 
