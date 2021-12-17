@@ -4,11 +4,11 @@ We can use a machine learning algorithm to teach the program to write programs.
 
 ## Rosetta stone
 
-| Machine learning                  | Programming
-| -----------                       | -----------
-| State                             | Current code
-| Action                            | Modify the phrase (functionalize a constant, replace a variable, ...)
-| Reward function                   | Test
+| Machine learning | Programming                                                           |
+|------------------|-----------------------------------------------------------------------|
+| State            | Current code                                                          |
+| Action           | Modify the phrase (functionalize a constant, replace a variable, ...) |
+| Reward function  | Test                                                                  |
 
 ## Main algorithm (2021-12-14)
 
