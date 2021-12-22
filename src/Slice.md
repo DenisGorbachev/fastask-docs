@@ -42,12 +42,6 @@ Slice will continue producing tasks. If you can't complete a task before timeout
 
 The "emergency mode" doesn't pause Slice, since the emergency task doesn't pause the time.
 
-### Why is Slice so harsh?
-
-No pain - no gain.
-
-However, you can [increase the rest time](#how-can-i-set-my-rest-time).
-
 ### How can I plan meetings?
 
 1. Create a meeting in your calendar.
@@ -68,3 +62,9 @@ Trust yourself. Only you can estimate how much time you need to spend on your go
 There is no objective estimator - no objective reward function. Your intuition is just as good as any formal algorithm.
 
 If you want extra assurance, you can verify that your intuition is consistent (doesn't produce any contradictions). For that, you can write down your assumptions (axioms), then look for potential conflicts. In addition to your personal axioms, you can add an extra one: "every person is mortal". This axiom will free your mind from looking for a perfect solution, because you won't have perfect information, and other people won't have it either.
+
+### Why is Slice so harsh?
+
+No pain - no gain.
+
+However, you can [increase the rest time](#how-can-i-set-my-rest-time).
