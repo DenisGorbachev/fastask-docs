@@ -2,9 +2,9 @@
 
 Zenbox prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Zenbox pushes it back into the queue & switches to the next task. You are motivated to produce a result that is imperfect but good enough.
 
-Zenbox is based on task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox outputs the default task: "Rest".
+Zenbox allows you to switch between different task streams to cover all areas of your life. By default, you can switch between Work, Rest, Exercise, Socialize. In addition, you are encouraged to define your own task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox uses the default task stream: "Rest".
 
-Zenbox creates task streams from [external apps](TaskManagement.md#data-source). You can connect messengers, email inboxes, calendars, project management systems & more. This allows you to create a single, unified task queue from different sources.
+Each task stream downloads the tasks from [external apps](TaskManagement.md#data-source). You can connect messengers, email inboxes, calendars, project management systems & more. This allows you to create a single, unified task queue from different sources.
 
 Zenbox uses a separate connector for each external app. Every connector can read the tasks from the app - but in addition to that, it can also write the task results back into the app. This allows you to directly update the data in the app (for example: send an email, update a spreadsheet row, create a new record in the database).
 
@@ -24,18 +24,20 @@ You can use Zenbox with just [a timer](https://www.google.com/search?q=timer) + 
 
 ### Setup
 
-1. Define your task streams as recurring events in calendar:
+1. Define a list of task stream names (the areas of your life that you need to give time to)
+   1. Feel free to use the default names in addition to your own:
+      1. Work
+      2. Exercise
+      3. Socialize
+      4. Rest
+      5. Eat
+   2. Ensure each name is a verb (rationale: you need to define what you're going to do, so it must be a verb)
+2. Define your task streams as recurring events in calendar:
    1. [Create a new Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/createcalendar)
    2. Create task streams as recurring events
-      1. Use the recommended names or pick your own:
-         1. Rest
-         2. Eat
-         3. Work
-         4. Exercise
-         5. Socialize
-      2. Minimize the amount of task streams (less is better)s
-      3. Ensure there is at least one task stream called "Rest"
-      4. Ensure the task streams cover the entire schedule (no gaps)
+      1. Minimize the amount of task streams (less is better)
+      2. Ensure there is at least one task stream called "Rest"
+      3. Ensure the task streams cover the entire schedule (no gaps)
    3. Associate a task source with each task stream except "Rest"
       1. Read the following notes:
          1. A task source is an external application where you see your tasks (e.g. instant messenger, email inbox, JIRA, Slack, Salesforce, ...)
