@@ -1,6 +1,6 @@
 # Funx
 
-Funx is a static analyzer that tells software developers what functions to write, and how to write them. Funx minimizes the total development time by instructing developers to implement partial functions, and telling them how to extend existing partial functions to cover a progressively larger part of their input domains.
+Funx is a static analyzer that tells software developers what functions to write. Funx minimizes the total development time by instructing developers to implement partial functions, and telling them how to extend existing partial functions to cover a progressively larger part of their input domains.
 
 Funx is based on an important observation: "In practice, a function will never receive its every possible input". In other words: there is always some obscure input that won't be seen by the function. This is true for every function with an infinite input domain (for example: the `add` function, which has an infinite input domain of pairs of natural numbers, will never see every possible pair of natural numbers).
 
