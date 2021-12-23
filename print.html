@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="Slice.html"><strong aria-hidden="true">1.</strong> Slice</a></li><li class="chapter-item expanded "><a href="Tmesg.html"><strong aria-hidden="true">2.</strong> Tmesg</a></li><li class="chapter-item expanded "><a href="Playbook.html"><strong aria-hidden="true">3.</strong> Playbook</a></li><li class="chapter-item expanded "><a href="MakerTaker.html"><strong aria-hidden="true">4.</strong> Maker-Taker</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded "><a href="definitions/TaskStream.html"><strong aria-hidden="true">10.</strong> Task stream</a></li><li class="chapter-item expanded "><a href="definitions/SafeRename.html"><strong aria-hidden="true">11.</strong> Safe rename</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="notes/WordsAreVoids.html"><strong aria-hidden="true">12.</strong> Words Are Voids</a></li><li class="chapter-item expanded "><a href="notes/Decisions.html"><strong aria-hidden="true">13.</strong> Decisions</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="TimeManagement.html"><strong aria-hidden="true">1.</strong> TimeManagement</a></li><li class="chapter-item expanded "><a href="TaskManagement.html"><strong aria-hidden="true">2.</strong> Zenbox</a></li><li class="chapter-item expanded "><a href="ProjectManagement.html"><strong aria-hidden="true">3.</strong> Playbook</a></li><li class="chapter-item expanded "><a href="MakerTaker.html"><strong aria-hidden="true">4.</strong> Maker-Taker</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded "><a href="definitions/TaskStream.html"><strong aria-hidden="true">10.</strong> Task stream</a></li><li class="chapter-item expanded "><a href="definitions/SafeRename.html"><strong aria-hidden="true">11.</strong> Safe rename</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="notes/WordsAreVoids.html"><strong aria-hidden="true">12.</strong> Words Are Voids</a></li><li class="chapter-item expanded "><a href="notes/Decisions.html"><strong aria-hidden="true">13.</strong> Decisions</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -147,18 +147,18 @@
                         <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
 <p>Zenbox is a personal productivity suite based on <a href="https://en.wikipedia.org/wiki/Theory_of_constraints" target="_blank">Theory of Constraints</a>. It contains the following components:</p>
 <ul>
-<li><a href="Slice.html">Slice</a> - time management system</li>
-<li><a href="Tmesg.html">Tmesg</a> - task management system</li>
-<li><a href="Playbook.html">Playbook</a> - project management system</li>
-<li><a href="MakerTaker.html">Maker-Taker</a> - specialized version of Tmesg for software development. </li>
+<li><a href="TimeManagement.html">Time management system</a></li>
+<li><a href="TaskManagement.html">Task management system</a></li>
+<li><a href="ProjectManagement.html">Project management system</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="slice"><a class="header" href="#slice">Slice</a></h1>
-<p>Slice is a time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Slice pushes it back into the queue &amp; switches to the next task. You are motivated to produce a result that is imperfect but good enough.</p>
-<p>Slice is based on task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Slice outputs the default task: &quot;Rest&quot;.</p>
-<p>Slice creates task streams from <a href="Tmesg.html#data-source">external apps</a>. You can connect messengers, email inboxes, calendars, project management systems &amp; more. This allows you to create a single, unified task queue from different sources.</p>
-<p>Slice uses a separate connector for each external app. Every connector can read the tasks from the app - but in addition to that, it can also write the task results back into the app. This allows you to directly update the data in the app (for example: send an email, update a spreadsheet row, create a new record in the database).</p>
-<p>Slice doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Slice starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue.</p>
-<p>Slice requires you to associate each time interval with a <a href="definitions/TaskStream.html">task stream</a>. During that time interval, you will only see tasks from this stream.</p>
+<p>In addition, Zenbox provides <a href="MakerTaker.html">Maker-Taker</a> - a highly specialized task management system for software developers working in the functional paradigm.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="time-management"><a class="header" href="#time-management">Time management</a></h1>
+<p>Zenbox is a personal time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Zenbox pushes it back into the queue &amp; switches to the next task. You are motivated to produce a result that is imperfect but good enough.</p>
+<p>Zenbox is based on task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox outputs the default task: &quot;Rest&quot;.</p>
+<p>Zenbox creates task streams from <a href="TaskManagement.html#data-source">external apps</a>. You can connect messengers, email inboxes, calendars, project management systems &amp; more. This allows you to create a single, unified task queue from different sources.</p>
+<p>Zenbox uses a separate connector for each external app. Every connector can read the tasks from the app - but in addition to that, it can also write the task results back into the app. This allows you to directly update the data in the app (for example: send an email, update a spreadsheet row, create a new record in the database).</p>
+<p>Zenbox doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Zenbox starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue.</p>
+<p>Zenbox requires you to associate each time interval with a <a href="definitions/TaskStream.html">task stream</a>. During that time interval, you will only see tasks from this stream.</p>
 <h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
 <li>You save time by <em>not</em> choosing the next task (the system sorts the tasks automatically by the time of arrival).</li>
@@ -166,7 +166,7 @@
 <li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
 </ul>
 <h2 id="how-to-start"><a class="header" href="#how-to-start">How to start</a></h2>
-<p>You can use Slice with just a timer + self-discipline. Here is how:</p>
+<p>You can use Zenbox with just <a href="https://www.google.com/search?q=timer">a timer</a> + self-discipline. Here is how:</p>
 <h3 id="setup"><a class="header" href="#setup">Setup</a></h3>
 <ol>
 <li>Define your task streams as recurring events in calendar:
@@ -227,8 +227,8 @@
 </li>
 <li>If there is no event for current time in any of your calendars:
 <ol>
-<li>Execute <a href="Slice.html#setup">Setup</a> (ensure there are no gaps between task streams)</li>
-<li>Execute <a href="Slice.html#run">Run</a> again</li>
+<li>Execute <a href="TimeManagement.html#setup">Setup</a> (ensure there are no gaps between task streams)</li>
+<li>Execute <a href="TimeManagement.html#run">Run</a> again</li>
 </ol>
 </li>
 </ol>
@@ -267,7 +267,7 @@
 <li>When you finish the task:
 <ol>
 <li>Publish the task result</li>
-<li><a href="Slice.html#submit-the-task-result-for-review">Submit the task result for review</a></li>
+<li><a href="TimeManagement.html#submit-the-task-result-for-review">Submit the task result for review</a></li>
 <li>Stop the timer</li>
 </ol>
 </li>
@@ -291,27 +291,27 @@
 </li>
 </ol>
 <h2 id="how-to-improve"><a class="header" href="#how-to-improve">How to improve</a></h2>
-<p>For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="Tmesg.html">Tmesg</a> to source the tasks from external apps.</p>
+<p>For teams, Zenbox can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="TaskManagement.html">task management</a> to source the tasks from external apps.</p>
 <h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
 <h3 id="how-can-i-set-my-rest-time"><a class="header" href="#how-can-i-set-my-rest-time">How can I set my rest time?</a></h3>
 <p>You can associate a specific time interval with a task stream that contains only one task: &quot;Rest&quot;. You're encouraged to take as much rest as you actually need.</p>
 <h3 id="how-can-i-prioritize-the-tasks"><a class="header" href="#how-can-i-prioritize-the-tasks">How can I prioritize the tasks?</a></h3>
 <ol>
 <li>You can prioritize a single task stream by increasing its time interval.</li>
-<li>You can autocomplete a task using <a href="Tmesg.html#autoresponder">an autoresponder</a>.</li>
-<li>You can't prioritize a single task within a stream. This increases your total productivity, because you will complete both the urgent tasks <strong>and</strong> the important tasks within a single task stream. It's important to work on important tasks, so Slice disallows manual prioritization (which is ).</li>
+<li>You can autocomplete a task using <a href="TaskManagement.html#autoresponder">an autoresponder</a>.</li>
+<li>You can't prioritize a single task within a stream. This increases your total productivity, because you will complete both the urgent tasks <strong>and</strong> the important tasks within a single task stream. It's important to work on important tasks, so Zenbox disallows manual prioritization (which is ).</li>
 </ol>
 <h3 id="what-should-i-do-in-an-emergency"><a class="header" href="#what-should-i-do-in-an-emergency">What should I do in an emergency?</a></h3>
-<p>You can activate &quot;emergency mode&quot;. While it is active, Slice will add extra fields (customizable by you) to each default response.</p>
-<p>Slice will continue producing tasks. If you can't complete a task before timeout, Slice will send the default response.</p>
-<p>The &quot;emergency mode&quot; doesn't pause Slice, since the emergency task doesn't pause the time.</p>
+<p>You can activate &quot;emergency mode&quot;. While it is active, Zenbox will add extra fields (customizable by you) to each default response.</p>
+<p>Zenbox will continue producing tasks. If you can't complete a task before timeout, Zenbox will send the default response.</p>
+<p>The &quot;emergency mode&quot; doesn't pause Zenbox, since the emergency task doesn't pause the time.</p>
 <h3 id="how-can-i-plan-meetings"><a class="header" href="#how-can-i-plan-meetings">How can I plan meetings?</a></h3>
 <ol>
 <li>Create a meeting in your calendar.</li>
-<li>Connect your calendar to Slice.</li>
+<li>Connect your calendar to Zenbox.</li>
 <li>Ensure the calendar for meetings has a higher priority than the calendar for normal task streams.</li>
 </ol>
-<p>Slice will treat the meeting as a separate task stream. When the time comes, it will remind you to join the meeting.</p>
+<p>Zenbox will treat the meeting as a separate task stream. When the time comes, it will remind you to join the meeting.</p>
 <p>Warning: meetings decrease productivity. You can avoid meetings with the following tactics:</p>
 <ul>
 <li>Ask the person who proposed the meeting to send you a summary of what he wants to say &amp; promise to respond to him (most often, people schedule meetings because it gives them a guaranteed time slot to present their ideas).</li>
@@ -321,12 +321,13 @@
 <p>Trust yourself. Only you can estimate how much time you need to spend on your goals. Also, you can change it later.</p>
 <p>There is no objective estimator - no objective reward function. Your intuition is just as good as any formal algorithm.</p>
 <p>If you want extra assurance, you can verify that your intuition is consistent (doesn't produce any contradictions). For that, you can write down your assumptions (axioms), then look for potential conflicts. In addition to your personal axioms, you can add an extra one: &quot;every person is mortal&quot;. This axiom will free your mind from looking for a perfect solution, because you won't have perfect information, and other people won't have it either.</p>
-<h3 id="why-is-slice-so-harsh"><a class="header" href="#why-is-slice-so-harsh">Why is Slice so harsh?</a></h3>
+<h3 id="why-is-zenbox-so-harsh"><a class="header" href="#why-is-zenbox-so-harsh">Why is Zenbox so harsh?</a></h3>
 <p>No pain - no gain.</p>
-<p>However, you can <a href="Slice.html#how-can-i-set-my-rest-time">increase the rest time</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="tmesg"><a class="header" href="#tmesg">Tmesg</a></h1>
-<p>Tmesg is a task management system. It unifies tasks &amp; messages under a single request-response paradigm.</p>
-<p>Tmesg requires you to submit task results, which are forwarded to external systems. For example, if the task were &quot;Reply to email&quot;, the system would expect the task result to be an answer to the email, and it would send the answer on user's behalf via email server. This allows to use Tmesg as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).</p>
+<p>If you want something you don't have, you need to give up something you don't want.</p>
+<p>So what do you <em>really</em> want?</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="task-management"><a class="header" href="#task-management">Task management</a></h1>
+<p>Zenbox unifies tasks &amp; messages under a single request-response paradigm.</p>
+<p>Zenbox requires you to submit task results, which are forwarded to external systems. For example, if the task were &quot;Reply to email&quot;, the system would expect the task result to be an answer to the email, and it would send the answer on user's behalf via email server. This allows to use Zenbox as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).</p>
 <h2 id="api"><a class="header" href="#api">API</a></h2>
 <ul>
 <li><code>push</code> - add a task to the queue
@@ -415,8 +416,8 @@
 </ul>
 <h3 id="autoresponder"><a class="header" href="#autoresponder">Autoresponder</a></h3>
 <p>Autoresponder is a function that generates automatic responses for certain messages. It saves your time by keeping simple messages away from your inbox.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="playbook"><a class="header" href="#playbook">Playbook</a></h1>
-<p>Playbook is a project management system. It helps you to make decisions, verify them with simulations, send the tasks to <a href="Tmesg.html">Tmesg</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="project-management"><a class="header" href="#project-management">Project management</a></h1>
+<p>Zenbox allows you to manage projects by providing a long-term planning system. It helps you make decisions, verify them with simulations, <a href="TaskManagement.html">send the tasks</a> to employees.</p>
 <h2 id="benefits-1"><a class="header" href="#benefits-1">Benefits</a></h2>
 <ul>
 <li><strong>Save time on micromanagement</strong>: the tasks will be displayed in the web interface + sent automatically by the Telegram bot.</li>
