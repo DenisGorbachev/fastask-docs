@@ -18,9 +18,73 @@ Slice requires you to associate each time interval with a [task stream](definiti
 * You are motivated to skip procrastinating & start working on the task (otherwise the system would start & stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).
 * You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were "Reply to email", the system would send a default answer: "Sorry, I can't reply now. Please send your message again later.").
 
-## Implementation
+## How to start
 
-Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up [Tmesg](Tmesg.md) to source the tasks from external apps.
+You can use Slice with just a timer + self-discipline. Here is how:
+
+### Setup
+
+1. Define your task streams as recurring events in calendar:
+   1. [Create a new Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/createcalendar)
+   2. Create task streams as recurring events
+      1. Use the recommended names or pick your own:
+         1. Rest
+         2. Eat
+         3. Work
+         4. Exercise
+         5. Socialize
+      2. Minimize the amount of task streams (less is better)s
+      3. Ensure there is at least one task stream called "Rest"
+      4. Ensure the task streams cover the entire schedule (no gaps)
+   3. Associate a task source with each task stream except "Rest"
+      1. Read the following notes:
+         1. A task source is an external application where you see your tasks (e.g. instant messenger, email inbox, JIRA, Slack, Salesforce, ...)
+         2. If you want to create a task source that aggregates multiple individual sources (e.g. for "Answer all messages" task stream), you can use multiple URLs or a single aggregate name (e.g. "Messengers")
+      2. Put the task source identifier into event description
+         1. Notes:
+            1. A task source identifier can be any string:
+               1. A web app URL (recommended)
+               2. A desktop app name
+               3. An aggregate name (e.g. "Messengers")
+
+### Run
+
+1. Pick the current task stream:
+   1. Go through your calendars from top to bottom:
+      1. If there is an event for current time, use this event as task stream
+   2. If there is no event for current time in any of your calendars:
+      1. Execute [Setup](#setup) (ensure there are no gaps between task streams)
+      2. Execute [Run](#run) again
+2. Pick the current task from the task stream
+3. Choose the task duration
+   1. Set a timer for 5 minutes
+   2. Choose the task duration
+      1. Don't think about other tasks; you will get to them later
+      2. The more important the current task, the more time you should allocate to it
+   3. If the timer runs out before you choose the duration: choose the default (1 hour)
+      1. Don't spend more time on choosing the task duration
+4. Set a timer for task duration minus 5 minutes
+   1. Note: you will use those 5 minutes to publish the task result (e.g. push the commits, publish the documents, send messages from drafts).
+5. Work on the task:
+   1. Ensure you always have a structurally complete result
+      1. It may have "TODO" markers, but the general idea must be understandable by the person who receives the task result.
+6. When you finish the task:
+   1. Publish the task result
+   2. [Submit the task result for review](#submit-the-task-result-for-review)
+   3. Stop the timer
+7. If the timer runs out before you finish the task:
+   1. Mark the task as failed
+   2. Execute the same actions as in "When you finish the task"
+      1. Don't spend more time on improving the task result. Instead, accept the failure & continue to the next task. This experience will help you to stop procrastinating & learn to produce a good-enough task result within a limited time
+
+### Submit the task result for review
+
+1. Send the task result to your teammates via group chat.
+   1. If you don't have teammates: create a group chat with people who are working on similar projects.
+
+## How to improve
+
+For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up [Tmesg](Tmesg.md) to source the tasks from external apps.
 
 ## FAQ
 
