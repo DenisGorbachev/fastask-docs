@@ -154,8 +154,8 @@
 <p>In addition, Zenbox provides <a href="FunX.html">FunX</a> - a static analyzer that generates tasks for software developers.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="time-management"><a class="header" href="#time-management">Time management</a></h1>
 <p>Zenbox prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Zenbox pushes it back into the queue &amp; switches to the next task. You are motivated to produce a result that is imperfect but good enough.</p>
-<p>Zenbox is based on task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox outputs the default task: &quot;Rest&quot;.</p>
-<p>Zenbox creates task streams from <a href="TaskManagement.html#data-source">external apps</a>. You can connect messengers, email inboxes, calendars, project management systems &amp; more. This allows you to create a single, unified task queue from different sources.</p>
+<p>Zenbox allows you to switch between different task streams to cover all areas of your life. By default, you can switch between Work, Rest, Exercise, Socialize. In addition, you are encouraged to define your own task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox uses the default task stream: &quot;Rest&quot;.</p>
+<p>Each task stream downloads the tasks from <a href="TaskManagement.html#data-source">external apps</a>. You can connect messengers, email inboxes, calendars, project management systems &amp; more. This allows you to create a single, unified task queue from different sources.</p>
 <p>Zenbox uses a separate connector for each external app. Every connector can read the tasks from the app - but in addition to that, it can also write the task results back into the app. This allows you to directly update the data in the app (for example: send an email, update a spreadsheet row, create a new record in the database).</p>
 <p>Zenbox doesn't allow you to see the all tasks on one page. Instead, it displays only the first task from the currently active stream. In addition, Zenbox starts the timer automatically, without waiting for you. It allocates a limited time to each task, after which it &quot;rotates&quot; to the next task. If you haven't completed the task on time, the system moves the task to the back of the queue.</p>
 <p>Zenbox requires you to associate each time interval with a <a href="definitions/TaskStream.html">task stream</a>. During that time interval, you will only see tasks from this stream.</p>
@@ -169,21 +169,26 @@
 <p>You can use Zenbox with just <a href="https://www.google.com/search?q=timer">a timer</a> + self-discipline. Here is how:</p>
 <h3 id="setup"><a class="header" href="#setup">Setup</a></h3>
 <ol>
+<li>Define a list of task stream names (the areas of your life that you need to give time to)
+<ol>
+<li>Feel free to use the default names in addition to your own:
+<ol>
+<li>Work</li>
+<li>Exercise</li>
+<li>Socialize</li>
+<li>Rest</li>
+<li>Eat</li>
+</ol>
+</li>
+<li>Ensure each name is a verb (rationale: you need to define what you're going to do, so it must be a verb)</li>
+</ol>
+</li>
 <li>Define your task streams as recurring events in calendar:
 <ol>
 <li><a href="https://calendar.google.com/calendar/u/0/r/settings/createcalendar">Create a new Google Calendar</a></li>
 <li>Create task streams as recurring events
 <ol>
-<li>Use the recommended names or pick your own:
-<ol>
-<li>Rest</li>
-<li>Eat</li>
-<li>Work</li>
-<li>Exercise</li>
-<li>Socialize</li>
-</ol>
-</li>
-<li>Minimize the amount of task streams (less is better)s</li>
+<li>Minimize the amount of task streams (less is better)</li>
 <li>Ensure there is at least one task stream called &quot;Rest&quot;</li>
 <li>Ensure the task streams cover the entire schedule (no gaps)</li>
 </ol>
@@ -604,11 +609,11 @@
 <li>Def depends on the executor, which interprets some words of the def in an executor-specific way</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="task-stream"><a class="header" href="#task-stream">Task stream</a></h1>
-<p>Task stream is a list of tasks ordered by the time of arrival.</p>
-<p>Task streams are organized in a hierarchy: a parent stream can receive tasks from multiple child streams.</p>
+<p>Task stream is an object that generates the tasks from <a href="definitions/../TaskManagement.html#data-source">external apps</a>.</p>
 <h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
 <ul>
 <li>URL - the url for downloading the tasks</li>
+<li>API token - the authentication token for downloading the tasks</li>
 <li>Default task duration - the time interval in milliseconds that is used if the user doesn't specify the task duration</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="safe-rename"><a class="header" href="#safe-rename">Safe rename</a></h1>
