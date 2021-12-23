@@ -4,10 +4,13 @@
 
 # Systems
 
-- [TimeManagement](TimeManagement.md)
-- [Zenbox](TaskManagement.md)
-- [Playbook](ProjectManagement.md)
-- [Maker-Taker](MakerTaker.md)
+- [Time management](TimeManagement.md)
+- [Task management](TaskManagement.md)
+- [Project management](ProjectManagement.md)
+
+# Helpers
+
+- [Funx](Funx.md)
 
 # Definitions
 

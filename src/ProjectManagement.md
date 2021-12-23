@@ -1,6 +1,6 @@
 # Project management
 
-Zenbox allows you to manage projects by providing a long-term planning system. It helps you make decisions, verify them with simulations, [send the tasks](TaskManagement.md) to employees.
+Zenbox helps you make project-level decisions, verify them with simulations, then automatically [send the tasks](TaskManagement.md) to employees.
 
 ## Benefits
 

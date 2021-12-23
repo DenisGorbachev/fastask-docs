@@ -1,6 +1,6 @@
 # Time management
 
-Zenbox is a personal time-management system. It prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Zenbox pushes it back into the queue & switches to the next task. You are motivated to produce a result that is imperfect but good enough.
+Zenbox prevents procrastination by setting a time limit for each task. If you don't complete the task on time, Zenbox pushes it back into the queue & switches to the next task. You are motivated to produce a result that is imperfect but good enough.
 
 Zenbox is based on task streams. Each task stream is associated with a time interval that specifies when this stream should be active. If no task stream is associated with the current time interval, Zenbox outputs the default task: "Rest".
 
@@ -133,4 +133,4 @@ No pain - no gain.
 
 If you want something you don't have, you need to give up something you don't want.
 
-So what do you *really* want?
+What do you **really** want?

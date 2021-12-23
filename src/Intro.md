@@ -6,4 +6,4 @@ Zenbox is a personal productivity suite based on <a href="https://en.wikipedia.o
 * [Task management system](TaskManagement.md)
 * [Project management system](ProjectManagement.md)
 
-In addition, Zenbox provides [Maker-Taker](MakerTaker.md) - a highly specialized task management system for software developers working in the functional paradigm.
+In addition, Zenbox provides [Funx](Funx.md) - a static analyzer that generates tasks for software developers.
