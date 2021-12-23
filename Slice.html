@@ -156,8 +156,133 @@
 <li>You are motivated to skip procrastinating &amp; start working on the task (otherwise the system would start &amp; stop the timer automatically, marking the task as incomplete and moving it to the back of the queue).</li>
 <li>You are motivated to complete the task (otherwise the system will send a default result to an external system - for example, if the task were &quot;Reply to email&quot;, the system would send a default answer: &quot;Sorry, I can't reply now. Please send your message again later.&quot;).</li>
 </ul>
-<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
-<p>Slice system can be used by a single person with just a timer + self-discipline. For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="Tmesg.html">Tmesg</a> to source the tasks from external apps.</p>
+<h2 id="how-to-start"><a class="header" href="#how-to-start">How to start</a></h2>
+<p>You can use Slice with just a timer + self-discipline. Here is how:</p>
+<h3 id="setup"><a class="header" href="#setup">Setup</a></h3>
+<ol>
+<li>Define your task streams as recurring events in calendar:
+<ol>
+<li><a href="https://calendar.google.com/calendar/u/0/r/settings/createcalendar">Create a new Google Calendar</a></li>
+<li>Create task streams as recurring events
+<ol>
+<li>Use the recommended names or pick your own:
+<ol>
+<li>Rest</li>
+<li>Eat</li>
+<li>Work</li>
+<li>Exercise</li>
+<li>Socialize</li>
+</ol>
+</li>
+<li>Minimize the amount of task streams (less is better)s</li>
+<li>Ensure there is at least one task stream called &quot;Rest&quot;</li>
+<li>Ensure the task streams cover the entire schedule (no gaps)</li>
+</ol>
+</li>
+<li>Associate a task source with each task stream except &quot;Rest&quot;
+<ol>
+<li>Read the following notes:
+<ol>
+<li>A task source is an external application where you see your tasks (e.g. instant messenger, email inbox, JIRA, Slack, Salesforce, ...)</li>
+<li>If you want to create a task source that aggregates multiple individual sources (e.g. for &quot;Answer all messages&quot; task stream), you can use multiple URLs or a single aggregate name (e.g. &quot;Messengers&quot;)</li>
+</ol>
+</li>
+<li>Put the task source identifier into event description
+<ol>
+<li>Notes:
+<ol>
+<li>A task source identifier can be any string:
+<ol>
+<li>A web app URL (recommended)</li>
+<li>A desktop app name</li>
+<li>An aggregate name (e.g. &quot;Messengers&quot;)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="run"><a class="header" href="#run">Run</a></h3>
+<ol>
+<li>Pick the current task stream:
+<ol>
+<li>Go through your calendars from top to bottom:
+<ol>
+<li>If there is an event for current time, use this event as task stream</li>
+</ol>
+</li>
+<li>If there is no event for current time in any of your calendars:
+<ol>
+<li>Execute <a href="#setup">Setup</a> (ensure there are no gaps between task streams)</li>
+<li>Execute <a href="#run">Run</a> again</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Pick the current task from the task stream</li>
+<li>Choose the task duration
+<ol>
+<li>Set a timer for 5 minutes</li>
+<li>Choose the task duration
+<ol>
+<li>Don't think about other tasks; you will get to them later</li>
+<li>The more important the current task, the more time you should allocate to it</li>
+</ol>
+</li>
+<li>If the timer runs out before you choose the duration: choose the default (1 hour)
+<ol>
+<li>Don't spend more time on choosing the task duration</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Set a timer for task duration minus 5 minutes
+<ol>
+<li>Note: you will use those 5 minutes to publish the task result (e.g. push the commits, publish the documents, send messages from drafts).</li>
+</ol>
+</li>
+<li>Work on the task:
+<ol>
+<li>Ensure you always have a structurally complete result
+<ol>
+<li>It may have &quot;TODO&quot; markers, but the general idea must be understandable by the person who receives the task result.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>When you finish the task:
+<ol>
+<li>Publish the task result</li>
+<li><a href="#submit-the-task-result-for-review">Submit the task result for review</a></li>
+<li>Stop the timer</li>
+</ol>
+</li>
+<li>If the timer runs out before you finish the task:
+<ol>
+<li>Mark the task as failed</li>
+<li>Execute the same actions as in &quot;When you finish the task&quot;
+<ol>
+<li>Don't spend more time on improving the task result. Instead, accept the failure &amp; continue to the next task. This experience will help you to stop procrastinating &amp; learn to produce a good-enough task result within a limited time</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="submit-the-task-result-for-review"><a class="header" href="#submit-the-task-result-for-review">Submit the task result for review</a></h3>
+<ol>
+<li>Send the task result to your teammates via group chat.
+<ol>
+<li>If you don't have teammates: create a group chat with people who are working on similar projects.</li>
+</ol>
+</li>
+</ol>
+<h2 id="how-to-improve"><a class="header" href="#how-to-improve">How to improve</a></h2>
+<p>For teams, Slice can be implemented as a web application with a minimal UI. The team members can't add the tasks manually - the admin must set up <a href="Tmesg.html">Tmesg</a> to source the tasks from external apps.</p>
 <h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
 <h3 id="how-can-i-set-my-rest-time"><a class="header" href="#how-can-i-set-my-rest-time">How can I set my rest time?</a></h3>
 <p>You can associate a specific time interval with a task stream that contains only one task: &quot;Rest&quot;. You're encouraged to take as much rest as you actually need.</p>
