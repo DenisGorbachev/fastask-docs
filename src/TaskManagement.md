@@ -1,8 +1,8 @@
-# Tmesg
+# Task management
 
-Tmesg is a task management system. It unifies tasks & messages under a single request-response paradigm.
+Zenbox unifies tasks & messages under a single request-response paradigm.
 
-Tmesg requires you to submit task results, which are forwarded to external systems. For example, if the task were "Reply to email", the system would expect the task result to be an answer to the email, and it would send the answer on user's behalf via email server. This allows to use Tmesg as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).
+Zenbox requires you to submit task results, which are forwarded to external systems. For example, if the task were "Reply to email", the system would expect the task result to be an answer to the email, and it would send the answer on user's behalf via email server. This allows to use Zenbox as a proxy between you and the external task sources (email, messengers, Salesforce notifications, GitHub issues, Google Sheets rows, ...).
 
 ## API
 

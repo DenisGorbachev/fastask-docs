@@ -4,9 +4,9 @@
 
 # Systems
 
-- [Slice](Slice.md)
-- [Tmesg](Tmesg.md)
-- [Playbook](Playbook.md)
+- [TimeManagement](TimeManagement.md)
+- [Zenbox](TaskManagement.md)
+- [Playbook](ProjectManagement.md)
 - [Maker-Taker](MakerTaker.md)
 
 # Definitions

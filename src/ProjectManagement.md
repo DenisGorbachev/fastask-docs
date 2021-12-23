@@ -1,6 +1,6 @@
-# Playbook
+# Project management
 
-Playbook is a project management system. It helps you to make decisions, verify them with simulations, send the tasks to [Tmesg](Tmesg.md).
+Zenbox allows you to manage projects by providing a long-term planning system. It helps you make decisions, verify them with simulations, [send the tasks](TaskManagement.md) to employees.
 
 ## Benefits
 
