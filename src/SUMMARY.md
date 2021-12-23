@@ -10,7 +10,7 @@
 
 # Helpers
 
-- [Funx](Funx.md)
+- [FunX](FunX.md)
 
 # Definitions
 
