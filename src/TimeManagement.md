@@ -35,9 +35,12 @@ You can use Zenbox with just [a timer](https://www.google.com/search?q=timer) + 
 2. Define your task streams as recurring events in calendar:
    1. [Create a new Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/createcalendar)
    2. Create task streams as recurring events
-      1. Minimize the amount of task streams (less is better)
-      2. Ensure there is at least one task stream called "Rest"
-      3. Ensure the task streams cover the entire schedule (no gaps)
+      1. Ensure availability is set correctly:
+         1. "Busy" if you don't want other people to schedule meetings with you during this task stream
+         1. "Free" if you do want (or don't know if you want) other people to schedule meetings with you during this task stream
+      2. Minimize the amount of task streams (less is better)
+      3. Ensure there is at least one task stream called "Rest"
+      4. Ensure the task streams cover the entire schedule (no gaps)
    3. Associate a task source with each task stream except "Rest"
       1. Read the following notes:
          1. A task source is an external application where you see your tasks (e.g. instant messenger, email inbox, JIRA, Slack, Salesforce, ...)
