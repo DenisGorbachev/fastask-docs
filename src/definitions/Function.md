@@ -1,6 +1,6 @@
 # Function
 
-Function is a list of [instructions](Instruction.md) with at least one [variable](Variable.md).
+Function is a list of [expressions](Expression.md) with at least one [variable](Variable.md).
 
 ## Standard function
 

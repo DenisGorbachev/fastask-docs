@@ -19,6 +19,10 @@
 * [Type](definitions/Type.md)
 * [Dict](definitions/Dict.md)
 * [Def](definitions/Def.md)
+* [Executor](definitions/Executor.md)
+* [Expression](definitions/Expression.md)
+* [Variable](definitions/Variable.md)
+* [Function](definitions/Function.md)
 * [Task stream](definitions/TaskStream.md)
 * [Safe rename](definitions/SafeRename.md)
 

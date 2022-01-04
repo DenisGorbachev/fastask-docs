@@ -10,3 +10,7 @@ In other words:
 
 * Def is a general form of the dict
 * Def depends on the executor, which interprets some words of the def in an executor-specific way
+
+## TODO
+
+* Reconcile with [function](Function.md)
