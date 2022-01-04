@@ -1,5 +1,11 @@
 # Zenbox drafts
 
+## How to sequence the development
+
+1. Split the input type into a list of quotient types ("a subset of users", "a subset of potential values")
+2. Define the order on the list of quotient types
+3. Implement the function progressively (as described in FunX document)
+
 ## Thoughts on tasks in general
 
 * Tasks are type definitions
