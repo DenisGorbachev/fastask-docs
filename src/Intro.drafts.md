@@ -8,7 +8,7 @@
     * Not every task result must be published
       * Example:
         * Setup SSH agent
-* Personal thoughts are one of the data sources
+* Data sources must include personal thoughts
   * May use a tree hierarchy to organize them
   * May link to functions
   * Should simplify adding repeating thoughts
@@ -21,6 +21,10 @@
         * If the thought is directly related to the current task, then act on it immediately, else add to the system
   * Must enforce a specific format of thoughts
     * Required to convert them into tasks
+* Data sources may include:
+  * Error monitoring alerts
+  * CI alerts
+  * GitHub dependabot alerts
 * Maybe the system should allow the user to solve the tasks by editing code
   * Programming tasks are definitely solved by editing code
   * Regular messages must be answered via chat UI
