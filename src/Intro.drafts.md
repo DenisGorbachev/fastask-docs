@@ -1,5 +1,16 @@
 # Zenbox drafts
 
+## Thoughts on tasks in general
+
+* Tasks are type definitions
+* Type definitions can be expressed as validator functions in non-dependently-typed languages
+  * Easy to implement
+  * Easy to use: just check that a specific value matches the type
+  * Allows to customize the error messages ("translate" the validator)
+* It's possible to define validators of validators (~ types of types)
+  * Validators of validators must check the source code of the function (not compiled function)
+  * Validators of validators can be called higher-order validators (HOVs)
+
 ## Thoughts on 2022-01-04
 
 * main = pipe(getConfig, getDataSources, getData, getTasks)
