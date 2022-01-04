@@ -1,5 +1,39 @@
 # Zenbox drafts
 
+## Thoughts on 2022-01-04
+
+* main = pipe(getConfig, getDataSources, getData, getTasks)
+* continuation = pipe(getTaskResults, getPublicPosts)
+  * Some task results must be published (at least: notify the task creator)
+    * Not every task result must be published
+      * Example:
+        * Setup SSH agent
+* Personal thoughts are one of the data sources
+  * May use a tree hierarchy to organize them
+  * May link to functions
+  * Should simplify adding repeating thoughts
+  * How to move from personal thoughts to personal tasks?
+    * Must sort the tasks by actual priority, not by the count of repetitions
+      * Example:
+        * Must sort "I need to pay taxes" higher than "I don't want to reenter SSH password"
+    * Must not produce the tasks to act immediately on the thoughts
+      * User must be instructed to internally process his thoughts according to the following algorithm:
+        * If the thought is directly related to the current task, then act on it immediately, else add to the system
+  * Must enforce a specific format of thoughts
+    * Required to convert them into tasks
+* Maybe the system should allow the user to solve the tasks by editing code
+  * Programming tasks are definitely solved by editing code
+  * Regular messages must be answered via chat UI
+  * App UIs are optimized for the tasks
+  * Designers can't work in code
+    * Not sure if we truly need designers
+    * Designers can edit the theme file
+      * But that would result in non-original design (no illustrations, etc)
+        * We would have to hire very advanced programmers who can design the pages
+  * Copywriters can work in code, but it's suboptimal
+
+---
+
 * How to choose event feeds?
   * Options
     * Return a list of event feeds to a trusted kernel
