@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="TimeManagement.html"><strong aria-hidden="true">1.</strong> Time management</a></li><li class="chapter-item expanded "><a href="TaskManagement.html"><strong aria-hidden="true">2.</strong> Task management</a></li><li class="chapter-item expanded "><a href="ProjectManagement.html"><strong aria-hidden="true">3.</strong> Project management</a></li><li class="chapter-item expanded affix "><li class="part-title">Helpers</li><li class="chapter-item expanded "><a href="FunX.html"><strong aria-hidden="true">4.</strong> FunX</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded "><a href="definitions/TaskStream.html"><strong aria-hidden="true">10.</strong> Task stream</a></li><li class="chapter-item expanded "><a href="definitions/SafeRename.html"><strong aria-hidden="true">11.</strong> Safe rename</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="notes/WordsAreVoids.html"><strong aria-hidden="true">12.</strong> Words Are Voids</a></li><li class="chapter-item expanded "><a href="notes/Decisions.html"><strong aria-hidden="true">13.</strong> Decisions</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Intro.html">Intro</a></li><li class="chapter-item expanded affix "><li class="part-title">Systems</li><li class="chapter-item expanded "><a href="TimeManagement.html"><strong aria-hidden="true">1.</strong> Time management</a></li><li class="chapter-item expanded "><a href="TaskManagement.html"><strong aria-hidden="true">2.</strong> Task management</a></li><li class="chapter-item expanded "><a href="ProjectManagement.html"><strong aria-hidden="true">3.</strong> Project management</a></li><li class="chapter-item expanded affix "><li class="part-title">Helpers</li><li class="chapter-item expanded "><a href="FunX.html"><strong aria-hidden="true">4.</strong> FunX</a></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="definitions/Word.html"><strong aria-hidden="true">5.</strong> Word</a></li><li class="chapter-item expanded "><a href="definitions/Phrase.html"><strong aria-hidden="true">6.</strong> Phrase</a></li><li class="chapter-item expanded "><a href="definitions/Type.html"><strong aria-hidden="true">7.</strong> Type</a></li><li class="chapter-item expanded "><a href="definitions/Dict.html"><strong aria-hidden="true">8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="definitions/Def.html"><strong aria-hidden="true">9.</strong> Def</a></li><li class="chapter-item expanded "><a href="definitions/Executor.html"><strong aria-hidden="true">10.</strong> Executor</a></li><li class="chapter-item expanded "><a href="definitions/Expression.html"><strong aria-hidden="true">11.</strong> Expression</a></li><li class="chapter-item expanded "><a href="definitions/Variable.html"><strong aria-hidden="true">12.</strong> Variable</a></li><li class="chapter-item expanded "><a href="definitions/Function.html"><strong aria-hidden="true">13.</strong> Function</a></li><li class="chapter-item expanded "><a href="definitions/TaskStream.html"><strong aria-hidden="true">14.</strong> Task stream</a></li><li class="chapter-item expanded "><a href="definitions/SafeRename.html"><strong aria-hidden="true">15.</strong> Safe rename</a></li><li class="chapter-item expanded affix "><li class="part-title">Notes</li><li class="chapter-item expanded "><a href="notes/WordsAreVoids.html"><strong aria-hidden="true">16.</strong> Words Are Voids</a></li><li class="chapter-item expanded "><a href="notes/Decisions.html"><strong aria-hidden="true">17.</strong> Decisions</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -533,7 +533,7 @@
 <li>Input: a list of existing type elements (can be an empty list)</li>
 <li>Output: a list of existing type elements appended to a list of new type elements</li>
 </ul>
-<p>Type can be defined as a reducer function:</p>
+<p>Type can be defined as a reducer function (<a href="definitions/Validator.html">a validator</a>):</p>
 <ul>
 <li>Input: a phrase to be typechecked</li>
 <li>Output: if the input passes the typecheck, then an empty phrase, else a non-empty phrase</li>
@@ -614,6 +614,41 @@
 <li>Def is a general form of the dict</li>
 <li>Def depends on the executor, which interprets some words of the def in an executor-specific way</li>
 </ul>
+<h2 id="todo"><a class="header" href="#todo">TODO</a></h2>
+<ul>
+<li>Reconcile with <a href="definitions/Function.html">function</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="executor"><a class="header" href="#executor">Executor</a></h1>
+<p>Executor is a real-world entity that turns input phrases into output phrases.</p>
+<h2 id="initial-executor"><a class="header" href="#initial-executor">Initial executor</a></h2>
+<p>Initial executor is an executor who triggered the chain of transformations of the input phrase.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="expression"><a class="header" href="#expression">Expression</a></h1>
+<p>Expression is a <a href="definitions/Phrase.html">phrase</a> that can be used by a specific <a href="definitions/Executor.html">executor</a> to produce a non-empty phrase.</p>
+<p>Alternative definitions:</p>
+<ul>
+<li>Expression is an input that results in a non-empty output (for a specific executor).</li>
+</ul>
+<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<ul>
+<li>Every expression is a phrase, but not every phrase is an expression. The executor determines whether a specific phrase is an expression.</li>
+<li>Sometimes we can't tell whether a specific phrase is an expression (e.g. when the target executor is not well-researched).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variable"><a class="header" href="#variable">Variable</a></h1>
+<p>Variable is a <a href="definitions/Word.html">word</a> that must be replaced to turn an invalid phrase into an <a href="definitions/Expression.html">valid phrase</a>.</p>
+<p>The replacement must be an <a href="definitions/Expression.html">expression</a>.</p>
+<h2 id="todo-1"><a class="header" href="#todo-1">TODO</a></h2>
+<ul>
+<li>Rephrase the definition, so that it doesn't rely on execution</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="function"><a class="header" href="#function">Function</a></h1>
+<p>Function is a list of <a href="definitions/Expression.html">expressions</a> with at least one <a href="definitions/Variable.html">variable</a>.</p>
+<h2 id="standard-function"><a class="header" href="#standard-function">Standard function</a></h2>
+<p>A standard function is a function that is defined in the standard library of the language.</p>
+<p>Examples for TypeScript:</p>
+<ul>
+<li>Arithmetic functions: <code>+</code>, <code>-</code>, ...</li>
+<li>Boolean functions: <code>==</code>, <code>===</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&amp;&amp;</code>, <code>||</code>, ...</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="task-stream"><a class="header" href="#task-stream">Task stream</a></h1>
 <p>Task stream is an object that generates the tasks from <a href="definitions/../TaskManagement.html#data-source">external apps</a>.</p>
 <h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
@@ -624,7 +659,7 @@
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="safe-rename"><a class="header" href="#safe-rename">Safe rename</a></h1>
 <p>Safe rename is an operation that replaces a single word with another word that's not present in the phrase (similar to &quot;<a href="https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B1-conversion">alpha-conversion</a>&quot;).</p>
-<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<h2 id="notes-4"><a class="header" href="#notes-4">Notes</a></h2>
 <ul>
 <li>Safe rename preserves the count of unique words in a phrase.</li>
 </ul>
