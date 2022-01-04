@@ -1,8 +1,10 @@
 # Function
 
-## Basic function
+Function is a list of [instructions](Instruction.md) with at least one [variable](Variable.md).
 
-Informally: A function which is a building block for other functions (TODO: write a formal definition).
+## Standard function
+
+A standard function is a function that is defined in the standard library of the language.
 
 Examples for TypeScript:
 

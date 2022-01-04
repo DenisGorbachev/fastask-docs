@@ -1,4 +1,8 @@
-# Maker-Taker drafts
+# FunX drafts
+
+## Main algorithm (2022-01-04)
+
+1. Define the [validator](definitions/Validator.md)
 
 ## Main algorithm (2021-12-13)
 
