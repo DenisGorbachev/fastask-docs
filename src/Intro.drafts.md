@@ -17,6 +17,19 @@
   * Validators of validators must check the source code of the function (not compiled function)
   * Validators of validators can be called higher-order validators (HOVs)
 
+## System tests
+
+* System must prevent over-engineering
+* System must prevent over-spending time on product instead of marketing
+  * This error has been reported multiple times by other startup founders
+    * The founders who like programming more than marketing are more likely to do this error
+* System must prevent under-spending time on planning
+  * System must prevent building the product without market research
+  * System must prevent selling the product by making false promises
+* System must allow specifying dependencies between tasks
+* System must linearize the dependency tree (turn a tree into a flat list)
+* System must distribute the tasks to other people
+
 ## Thoughts on 2022-01-04
 
 * main = pipe(getConfig, getDataSources, getData, getTasks)
