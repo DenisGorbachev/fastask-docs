@@ -14,21 +14,21 @@
   * Easy to use: just check that a specific value matches the type
   * Allows to customize the error messages ("translate" the validator)
 * It's possible to define validators of validators (~ types of types)
-  * Validators of validators must check the source code of the function (not compiled function)
+  * Validators of validators must check the source code of the function (not the compiled function)
   * Validators of validators can be called higher-order validators (HOVs)
 
 ## System tests
 
-* System must prevent over-engineering
 * System must prevent over-spending time on product instead of marketing
   * This error has been reported multiple times by other startup founders
     * The founders who like programming more than marketing are more likely to do this error
 * System must prevent under-spending time on planning
   * System must prevent building the product without market research
-  * System must prevent selling the product by making false promises
 * System must allow specifying dependencies between tasks
 * System must linearize the dependency tree (turn a tree into a flat list)
 * System must distribute the tasks to other people
+  * System should "advertise" the tasks (post them as jobs / send them as messages)
+  * System should notify the external executor when the task is updated
 
 ## Thoughts on 2022-01-04
 

@@ -1,5 +1,27 @@
 # FunX drafts
 
+## Main goals
+
+* Solve the problem of zero choices (production)
+* Solve the problem of many choices (reduction)
+
+Solutions:
+* Zero choices
+  * Start with a refinement (a smaller case)
+* Many choices
+  * (?) Start with a refinement (don't generalize before it's time)
+
+## Thoughts on 2022-01-06
+
+* Take a look at novel techniques
+  * Point-free programming
+  * Type-driven development
+* Types are syntactic validators
+  * Still need semantic validators
+    * Options
+      * Validator functions
+      * Refinement types (sigma types with extra conditions) 
+
 ## Main algorithm (2022-01-04)
 
 1. Define the [validator](definitions/Validator.md)
