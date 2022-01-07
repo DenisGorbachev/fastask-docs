@@ -2,14 +2,20 @@
 
 ## Main goals
 
-* Solve the problem of zero choices (production)
-* Solve the problem of many choices (reduction)
+* Solve the problem of mental blocks
+  * Solve the problem of zero choices (production)
+  * Solve the problem of many choices (reduction)
+* Solve the problem of progressive refinement (splitting into subtypes)
+* Solve the problem of teamwork (distribution)
 
 Solutions:
 * Zero choices
   * Start with a refinement (a smaller case)
 * Many choices
   * (?) Start with a refinement (don't generalize before it's time)
+* Refinement
+* Teamwork
+  * Order people by "level" of generality (what kind of tests is the person able to write: data tests, function tests, test tests, ...)
 
 ## Thoughts on 2022-01-06
 
