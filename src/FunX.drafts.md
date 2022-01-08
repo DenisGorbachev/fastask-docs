@@ -5,17 +5,70 @@
 * Solve the problem of mental blocks
   * Solve the problem of zero choices (production)
   * Solve the problem of many choices (reduction)
+  * Solve the problem of validation (ensure the task is correct)
+  * Solve the problem of implementation (ensure the result is correct)
 * Solve the problem of progressive refinement (splitting into subtypes)
 * Solve the problem of teamwork (distribution)
 
+Isomorphisms:
+* "How do I choose between ..." - Many choices problem
+* "Am I doing the right thing?" - Validation problem
+* "How do I define the output type?" - Zero choices problem (if no idea at all) | Many choices problem (if too many ideas)
+
 Solutions:
 * Zero choices
+  * Find outside your head
+    * Read Wikipedia (if zero choices for the semantic type)
+    * Read language docs (if zero choices for a programming language expression)
   * Start with a refinement (a smaller case)
 * Many choices
   * (?) Start with a refinement (don't generalize before it's time)
+* Definition
+  * Write a program top-down (requires correct partialization to prevent analysis paralysis)
+  * When you have many choices, go one level up
+    * Implement a parent function (or parent program)
+    * Choose the child function definition to match the parent function
+      * simulating the results of the parent function
+    * Example
+      * When you need to define the semantic type of the `main` function of your program, you need to define your `makeMoney` function
+* Implementation
+  * Just write tests
 * Refinement
 * Teamwork
   * Order people by "level" of generality (what kind of tests is the person able to write: data tests, function tests, test tests, ...)
+
+Notes:
+* Zero choice problems are rare in general
+  * There is information overflow
+  * Most zero choice problems reduce to many choice problems
+    * Zero choice for partner - actually many choice, but no-one passes the internal validation
+      * Solution: relax the validation rules
+* Type validation is a special case of writing a filter for many choices problem
+
+Paradoxes:
+* Find a partner - zero choices in many choice situation
+  * User defines a validator
+  * User applies a validator to an array
+  * User doesn't find any elements
+  * User concludes it's a zero choice problem
+  * However, his validator is too strict (e.g. choosing a partner on unrealistic criteria)
+  * Solution: apply a higher-order validator to the user-defined validator
+    * Options for a higher-order validator
+      * Ensure validator is defined via extensional search
+        * Implementation
+          * Define a parent function
+          * Ensure the element fits into the parent function
+        * Example
+          * User can't find a romantic partner
+            * User defines an unrealistic validator
+              * Must have 140 IQ
+              * Must have $100'000'000
+              * Must be a supermodel
+            * Higher-order validator requires the user to define the parent function
+            * User defines a parent function: `haveSex` with output type `Orgasm`
+              * Notice that there's no requirement for the partner to be a supermodel (user has had sex with non-supermodels before, and he was able to reach the orgasm)
+              * Notice that there's no requirement for a specific IQ or specific wealth
+            * Higher order validator returns errors, because the user-defined validator is too strict (includes criteria which are not relevant for the parent function)
 
 ## Thoughts on 2022-01-06
 
@@ -31,6 +84,7 @@ Solutions:
 ## Main algorithm (2022-01-04)
 
 1. Define the [validator](definitions/Validator.md)
+   1. Define the name
 
 ## Main algorithm (2021-12-13)
 
