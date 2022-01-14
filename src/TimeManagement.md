@@ -121,8 +121,8 @@ Zenbox will treat the meeting as a separate task stream. When the time comes, it
 
 Warning: meetings decrease productivity. You can avoid meetings with the following tactics:
 
-- Ask the person who proposed the meeting to send you a summary of what he wants to say & promise to respond to him (most often, people schedule meetings because it gives them a guaranteed time slot to present their ideas).
-- Hire someone to take the meetings for you.
+* Ask the person who proposed the meeting to send you a summary of what he wants to say & promise to respond to him (most often, people schedule meetings because it gives them a guaranteed time slot to present their ideas).
+* Hire someone to take the meetings for you.
 
 ### How do I choose the time interval to associate with a specific task stream?
 

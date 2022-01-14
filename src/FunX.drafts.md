@@ -11,11 +11,13 @@
 * Solve the problem of teamwork (distribution)
 
 Isomorphisms:
+
 * "How do I choose between ..." - Many choices problem
 * "Am I doing the right thing?" - Validation problem
 * "How do I define the output type?" - Zero choices problem (if no idea at all) | Many choices problem (if too many ideas)
 
 Solutions:
+
 * Zero choices
   * Find outside your head
     * Read Wikipedia (if zero choices for the semantic type)
@@ -38,6 +40,7 @@ Solutions:
   * Order people by "level" of generality (what kind of tests is the person able to write: data tests, function tests, test tests, ...)
 
 Notes:
+
 * Zero choice problems are rare in general
   * There is information overflow
   * Most zero choice problems reduce to many choice problems
@@ -46,6 +49,7 @@ Notes:
 * Type validation is a special case of writing a filter for many choices problem
 
 Paradoxes:
+
 * Find a partner - zero choices in many choice situation
   * User defines a validator
   * User applies a validator to an array
@@ -79,7 +83,7 @@ Paradoxes:
   * Still need semantic validators
     * Options
       * Validator functions
-      * Refinement types (sigma types with extra conditions) 
+      * Refinement types (sigma types with extra conditions)
 
 ## Main algorithm (2022-01-04)
 
