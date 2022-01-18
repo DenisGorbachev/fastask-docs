@@ -8,6 +8,7 @@
   * Solve the problem of validation (ensure the task is correct)
   * Solve the problem of implementation (ensure the result is correct)
 * Solve the problem of progressive refinement (splitting into subtypes)
+* Solve the problem of path choice (ordering implementations of child functions)
 * Solve the problem of teamwork (distribution)
 
 Isomorphisms:
