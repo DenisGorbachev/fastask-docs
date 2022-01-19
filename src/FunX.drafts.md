@@ -1,5 +1,14 @@
 # FunX drafts
 
+## Thoughts on 2022-01-18
+
+* Just write tests:
+  * Create a test
+  * Update the function to pass the test
+  * If not satisfied: create a test of the test suite
+* Extras
+  * Partialize with skipped tests
+
 ## Main goals
 
 * Solve the problem of mental blocks
