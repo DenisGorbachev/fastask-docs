@@ -1,5 +1,30 @@
 # FunX drafts
 
+## Thoughts on 2022-01-21
+
+* I need a system that would allow:
+  * Multiple executors to work on the same project
+  * Allow working on another function as if its child function were implemented properly (stub it)
+    * Options
+      * Use todo()
+        * Write the function as `return todo()` instead of `throw impl()`
+        * Create an `xtest`
+          * Test the function properly
+        * "Assign" the test to the executor (?)
+  * Allow setting tasks for non-developers
+    * Options
+      * Use an external database
+        * Setup a database
+        * Setup listeners
+          * Added executor
+            * Setup permissions
+          * Wanted to add a task
+            * Add a row with empty result
+          * Submitted form
+            * Validate result
+  * Allow pinging executors on their tasks
+    * Setup a chatbot
+
 ## Thoughts on 2022-01-18
 
 * Just write tests:
