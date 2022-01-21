@@ -15,6 +15,8 @@
     * Options
       * Use an external database
         * Setup a database
+          * PostgreSQL
+          * Google Sheets
         * Setup listeners
           * Added executor
             * Setup permissions
@@ -22,6 +24,15 @@
             * Add a row with empty result
           * Submitted form
             * Validate result
+    * Notes
+      * Use Google Sheets
+        * Use rows as products
+        * Use comments to request changes
+        * Use "Tests" column to specify product tests as a URL to a documentation page (can be generated)
+  * Allow simulating the execution of tasks for non-developers
+    * Options
+      * Use thunks
+      * Use stubs (current solution)
   * Allow pinging executors on their tasks
     * Setup a chatbot
 
