@@ -4,7 +4,6 @@ pre-commit:
     lint-markdown:
       glob: "*.md"
       run: yarn lint:markdown {staged_files}
-    check-markdown-links:
-      skip: false
+    lint-markdown-links:
       glob: "*.md"
-      run: yarn check:markdown-links {all_files}
+      run: yarn lint:markdown:links .
