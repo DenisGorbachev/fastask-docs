@@ -2,8 +2,7 @@ pre-commit:
   parallel: true
   commands:
     lint-markdown:
-      glob: "*.md"
-      run: yarn lint:markdown {staged_files}
+      run: bash lint-markdown.sh
     lint-markdown-links:
       glob: "*.md"
       run: yarn lint:markdown:links .
