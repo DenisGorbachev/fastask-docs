@@ -1,6 +1,6 @@
 # Word
 
-**Word** is a list of characters without punctuation.
+**Word** is a list of characters without punctuation and whitespace.
 
 ## Examples
 
@@ -13,5 +13,4 @@
 
 ## Notes
 
-* Punctuation characters are .,() and whitespace characters.
-* In the context of context-free grammars, a word is called a symbol.
+* Punctuation characters are `.,()`

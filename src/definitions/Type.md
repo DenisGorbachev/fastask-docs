@@ -1,15 +1,20 @@
 # Type
 
-Type is a phrase that describes another phrase.
+Type is a group of similar [phrases](./Phrase.md).
 
-Type can be defined as a list of constructors ("actions" in machine learning).
+## Examples
 
-Type can be defined as a producer function:
+* Natural number
+* Website URL
+* Telegram username
+* Vehicle Identification Number
+* Restaurant
+* Restaurant name
+* Menu
+* Dish
 
-* Input: a list of existing type elements (can be an empty list)
-* Output: a list of existing type elements appended to a list of new type elements
+In fact, every English word denotes a mathematical type.
 
-Type can be defined as a reducer function ([a validator](Validator.md)):
+## Notes
 
-* Input: a phrase to be typechecked
-* Output: if the input passes the typecheck, then an empty phrase, else a non-empty phrase
+* Type can be described with a [type definition](./TypeDefinition.md)
