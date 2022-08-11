@@ -18,6 +18,7 @@
 # Helpers
 
 - [FunX](FunX.md)
+- [How to think](HowToThink.md)
 
 # Definitions
 

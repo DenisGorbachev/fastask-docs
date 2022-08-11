@@ -1,4 +1,4 @@
-# Thinking
+# How to think
 
 ## Goal
 
@@ -379,3 +379,4 @@ Notes 4:
 ## TODO
 
 * Merge with [How to make decisions](HowToMakeDecisions.md)
+* Merge with [Decimaker](Decimaker.md)
