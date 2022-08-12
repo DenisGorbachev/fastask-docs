@@ -1,19 +1,5 @@
 # How to think
 
-## Goal
-
-Options:
-
-* A computer program that takes a path to file & outputs a task
-* A human program
-  * Must be human-readable (-> Must be written in English)
-
-Decision:
-
-* Write a human program
-  * If possible, write Coq terms immediately
-* Write a computer program using the human program as input
-
 ## Listeners
 
 ### Start
@@ -30,6 +16,12 @@ Decision:
 * [Write a value for the name](#write-a-value-for-the-name)
   * Notes
     * The value is a [constructive model](#constructive-model) of a real thing that you want
+* Check the value syntactically
+  * On error: fix it (native)
+* Check the value semantically
+  * On error:
+    * [Refine the type](#refine-the-type)
+    * [Write a new value](#write-a-value-for-the-name)
 
 Questions:
 
@@ -56,8 +48,9 @@ Notes:
 (incomplete)
 
 * Try each
-  * Imagine a type (timeout: 10 minutes)
-  * Get [samples](#sample) -> Infer a type from samples (timeout: 5 minutes per example)
+  * Imagine types (timeout: 10 minutes)
+  * [Get samples](#get-samples) -> Infer types from samples
+* [Choose a type](#choose-a-type) from returned types
 
 Notes:
 
@@ -72,6 +65,49 @@ Notes:
   * Imagine a value (timeout: 10 minutes)
   * Use an [empty value](#empty-value)
   * Use a [default value](#default-value)
+
+### Refine the type
+
+Inputs:
+
+* Type
+* [Discomfort](#discomfort)
+
+* Get the relation that doesn't hold (input: discomfort)
+* Add relation to the current type as another condition
+  * If necessary, convert the type to the [quotient record](#quotient-record)
+
+### Choose a type
+
+* [Write a plan](#write-a-plan) where:
+  * Name: `get${ucfirst(name)}Type`
+  * Type: `Chooser<Type>`
+
+### Get samples
+
+Inputs:
+
+* Length
+* Existing samples
+
+Outputs:
+
+* Samples
+* [Finality](#final-x) of samples
+* Proof that samples are prefixed by existing samples  
+
+* While has next
+* [Get sample sources](#get-sample-sources) (timeout: 10 minutes)
+* Get sorter for sample source (timeout: 10 minutes)
+* Get sorted sample sources
+* For each sample source:
+  * Get next sample
+  * If next sample is in existing samples: continue
+  * Append next sample to existing samples
+
+### Get sample sources
+
+Type: (native)
 
 ### Generate a memorable name
 
@@ -210,6 +246,21 @@ Notes:
 
 * It's subjective
 
+### Final X
+
+Meaning: X can't be updated (see examples)
+
+Type: (X : Type) : (op : BasicOperation) -> op(X) = X
+
+Examples:
+
+* Samples are final if it's impossible to find more samples
+* Type is final if you are sure that it completely represents the actual objects
+
+Counter-examples:
+
+* Samples from Google are not final if you only looked at the first page of many pages
+
 ### Sample
 
 (incomplete)
@@ -256,6 +307,17 @@ Examples:
 
 * [Physical model](#physical-model)
 * [Symbolic model](#symbolic-model)
+
+### Discomfort
+
+Meaning: a state of being dissatisfied with something
+
+Type: (native)
+
+Examples:
+
+* Discomfort from "1 = 0"
+* Discomfort from eye strain
 
 ### NaturalProblem
 
@@ -375,6 +437,50 @@ Notes 4:
   * If you can't find a sorter, take the first option
     * If you don't like the first option, add a condition on the type (~ formalize why you don't like the first option)
       * If you can't add a condition on the type, take the first option (realize that your inability to add a condition is a proof that the first option is good enough)
+
+Notes 5 (timing):
+
+* We want to get a "satisfying" value in the shortest possible time
+* Basic operations take a different amount of time depending on inputs
+  * Examples
+    * "imagine" may be faster than "find" (for complex queries)
+    * "find" may be faster than "imagine" (for simple queries)
+    * "ask" may be faster than "imagine"
+* It looks like every basic operation requires a timeout (otherwise we can get )
+
+Notes 6 (synonyms):
+
+* make
+  * Meaning: do it yourself
+  * Synonyms:
+    * imagine (for creative mental tasks)
+    * recall (for non-creative mental tasks)
+    * design
+    * produce
+    * construct
+* find
+  * Meaning: find in the world
+  * Synonyms:
+    * google search (find from inanimate)
+    * find-in-page (find from inanimate)
+    * ask (find from humans)
+
+* "make" is faster for creative tasks
+* "find" is faster for non-creative tasks
+
+## Goal
+
+Options:
+
+* A computer program that takes a path to file & outputs a task
+* A human program
+  * Must be human-readable (-> Must be written in English)
+
+Decision:
+
+* Write a human program
+  * If possible, write Coq terms immediately
+* Write a computer program using the human program as input
 
 ## TODO
 
