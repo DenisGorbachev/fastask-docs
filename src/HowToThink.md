@@ -473,6 +473,12 @@ Notes 6 (synonyms):
 Options:
 
 * A computer program that takes a path to file & outputs a task
+* A Lean `theorem` that proves that the meta-object is constructed "correctly"
+* A Lean `main` function that outputs a goal
+  * Must ensure that the type matches
+  * Notes
+    * May represent a "train of thought" (sequence of steps that took the person to arrive at the current object)
+    * Can be run with `lean --run ...`
 * A human program
   * Must be human-readable (-> Must be written in English)
 
