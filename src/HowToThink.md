@@ -2,14 +2,51 @@
 
 ## Listeners
 
-### Start
+### Main loop
+
+* Manifest the current inconvenience
+  * Imagine: Imagine inconvenience
+  * Choose: Choose inconvenience
+  * Timeout: 10 minutes
+* Implement the primary change of the lifestyle
+
+Notes:
+
+* We assume it's invalid to desire something that doesn't exist in the world
+* Same problem as with the goal - you never know whether it's possible to implement that change in the lifestyle
+
+Options:
+
+* "By elimination" - seek what you want to eliminate from the lifestyle
+  * But we need external energy input to be happy -> We always need to add something
+
+### Solve a task
+
+Input: [lifestyle](#lifestyle)
+
+* Ask yourself: "What do you want?"
+* Write down the answer
+* Ensure the goal is reachable
+* If the task is doable
+  * If the task is easy
+    * Just do it
+  * Else
+    * [Write a plan](#write-a-plan)
+* Else
+  *
 
 * Determine the type of the task
-  * [Easy](#easy-task): just do it
-  * [Complex](#complex-task): (incomplete)
-  * Other: [write a plan](#write-a-plan)
+  * [Easy](#easy-task): do it without a plan
+  * [Complex](#complex-task): don't do it
+  * Other:
+
+Notes:
+
+* Dukkha -> Images -> Plan -> Execution
 
 ### Write a plan
+
+Main idea: to solve a
 
 * [Write a name](#write-a-name)
 * [Write a type for the name](#write-a-type-for-the-name)
@@ -122,7 +159,7 @@ Type: (native)
 ### On task changed
 
 1. Create a new file
-2. [Start](#start) a new task
+2. Start a new task
 
 Notes:
 
@@ -142,7 +179,7 @@ Notes:
 Meaning: a task that matches the following conditions:
 
 * Has an obvious plan
-* Does not have negative returns
+* Does not have negative returns besides time
 * And one of:
   * Is physical
   * [Is ancient](#ancient)
@@ -333,6 +370,13 @@ Examples:
 * I need a car
 * I need a function that returns a list of square roots
 
+### Lifestyle
+
+Options:
+
+* Distribution of time between processes
+* Decision policy
+
 ## Drafts
 
 ### Complex task meaning
@@ -446,7 +490,7 @@ Notes 5 (timing):
     * "imagine" may be faster than "find" (for complex queries)
     * "find" may be faster than "imagine" (for simple queries)
     * "ask" may be faster than "imagine"
-* It looks like every basic operation requires a timeout (otherwise we can get )
+* It looks like every basic operation requires a timeout
 
 Notes 6 (synonyms):
 
@@ -482,10 +526,15 @@ Options:
 * A human program
   * Must be human-readable (-> Must be written in English)
 
+Notes:
+
+* Life is modelled as a POMDP
+* Goal is a predicate on a state in a [POMDP](https://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process)
+
 Decision:
 
 * Write a human program
-  * If possible, write Coq terms immediately
+  * If possible, write Lean terms immediately
 * Write a computer program using the human program as input
 
 ## TODO
