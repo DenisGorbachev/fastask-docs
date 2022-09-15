@@ -4,21 +4,17 @@
 
 ### Main loop
 
-* Manifest the current inconvenience
-  * Imagine: Imagine inconvenience
-  * Choose: Choose inconvenience
+* Manifest the current pain
+  * Imagine: Imagine pain
+  * Choose: Choose pain
   * Timeout: 10 minutes
-* Implement the primary change of the lifestyle
+* Design a plan to reduce the pain
+* Fix the pain
 
-Notes:
+Axioms:
 
-* We assume it's invalid to desire something that doesn't exist in the world
-* Same problem as with the goal - you never know whether it's possible to implement that change in the lifestyle
-
-Options:
-
-* "By elimination" - seek what you want to eliminate from the lifestyle
-  * But we need external energy input to be happy -> We always need to add something
+* For every pain there is an action that reduces this pain
+* Some pains can't be reduced to zero
 
 ### Solve a task
 
@@ -46,8 +42,6 @@ Notes:
 
 ### Write a plan
 
-Main idea: to solve a
-
 * [Write a name](#write-a-name)
 * [Write a type for the name](#write-a-type-for-the-name)
 * [Write a value for the name](#write-a-value-for-the-name)
@@ -67,7 +61,7 @@ Questions:
     * Examples
       * We're looking for a "throwable", not a "rock"
       * We're looking for an "exchangeable", not "money"
-      * We're looking for "someone whom we can have sex with & live well & have children", not "human"
+      * We're looking for "someone whom we can have sex with & have children", not "partner"
 
 ### Write a name
 
@@ -171,6 +165,12 @@ Notes:
     * $name = unquote("$name" + "1") # or "2" if you think that definition 2 is better
 
 ## Definitions
+
+### Pain
+
+A bad feeling.
+
+This definition is intentionally vague, because most
 
 ### Easy task
 
@@ -539,5 +539,29 @@ Decision:
 
 ## TODO
 
+* Find an algorithm for "No Good Moves" situation
+  * Examples
+    * Can't write an article
+    * Can't choose a theme
+    * Can't decide on a business model
+    * Can't decide on a way to transfer the money
+  * General form description
+    * You're moving towards the city
+    * You arrive at a river which flows between you & the city
+    * You start looking for a way to cross the river
+    * You estimate that you could cross it by swimming, but you'll get wet and you're not sure if you'll have enough stamina to actually cross it
+      * Should you swim or should you look for a bridge?
+  * General form
+    * An agent is moving through a maze
+    * Each step has a cost (multiple resources)
+    * Some steps have a reward (multiple resources)
+    * The agent doesn't know the costs & rewards upfront, but he can ask other agents for estimates
+  * Features
+    * Doesn't have a definite timeout
+    * Has a "learn more" action (aka "get more samples", aka "continue searching")
+  * Options
+    * Flounder (continue generating options)
+      * But need to settle on the option
+    * Learn the distribution -> Choose an option that is an outlier of the distribution
 * Merge with [How to make decisions](HowToMakeDecisions.md)
 * Merge with [Decimaker](Decimaker.md)
