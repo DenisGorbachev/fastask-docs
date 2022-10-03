@@ -1,24 +1,73 @@
 # How to think
 
+## Stories
+
+### Keep Typing
+
+The "Keep Typing" system speeds up your meta-decisions.
+
+Meta-decisions are "decisions about decisions" - high-level principles that you rely on when making decisions. For example, if you need a new pen, you need to make a decision on how to choose it. Can you simply buy the first one that you see, or should you spend time researching all available pens to select the best one?
+
+Most people are rigid: they make the same meta-decisions to every situation. This leads to failure:
+
+* Some people tend to research a lot before making a decision. Such people become stuck in "analysis paralysis" in situations with infinite options.
+* Some people tend to take the first option that is available. Such people become stuck with suboptimal choices in situations with high variability.
+
+The "Keep Typing" system gives you a set of rules for making meta-decisions. It allows you to construct a decision process for every decision that you want to make. Essentially, it's a way to make decisions about decisions - overcoming your personal biases.
+
+### Blocks and Programs
+
+Every [block](#block) can be resolved by writing a program for yourself.
+
+A program is a plan of action. However, a program is more than just a plan, because it is written in a formal language. This allows you to prove its correctness. And this is what resolves the block - if you **know** that the program is correct, you can execute it without fear.
+
+A program is written in a formal language. A formal language is different from a natural language in one crucial aspect: every expression in a formal language has a single definite meaning, whereas most expressions in a natural language have multiple meanings. A formal language removes ambiguity, removes confusion, removes fear.
+
+However, it takes time to learn a formal language, and it takes time to write a program. Maybe there's a faster way? Maybe you can just work it out without any formalities?
+
+No.
+
+Having a block means that you already tried to "just work it out", and you couldn't. Writing a program is slow, but it's guaranteed to resolve your block.
+
+Your meta block consists of the following two contradictory statements:
+
+* "I think there is a natural way to resolve this block"
+* "I feel there is no way to resolve this block"
+
+Your logical part tells you there must be a natural way. But your emotional part tells you there is no way. Both parts are blocked. You need to unblock the logical part by realizing the contradiction.
+
+In fact, we're always writing programs (just very simple ones). For example, a shopping list is a very simple, crude program. It doesn't use a formal language, and it doesn't use any advanced mental constructs (like probability distributions of product quality). However, it's a plan nonetheless. We always write programs. We rarely write **formal** programs. Yet formal programs are what we need to resolve the blocks.
+
+## Axioms
+
+* There is [pain](#pain)
+* There is a way to reduce any pain
+
+Notes:
+
+* Some pains can't be reduced to zero
+
 ## Listeners
 
-### Main loop
+### On wake up
 
-* Manifest the current pain
+* Get the current [pain](#pain) using directed generation with the following arguments:
   * Imagine: Imagine pain
   * Choose: Choose pain
   * Timeout: 10 minutes
-* Design a plan to reduce the pain
-* Fix the pain
+* Formulate the [behavior](#behavior) that reduces the pain
+* Learn the new [behavior](#behavior)
 
-Axioms:
+Notes:
 
-* For every pain there is an action that reduces this pain
-* Some pains can't be reduced to zero
+* We focus on reducing the pain instead of increasing pleasure because the latter doesn't converge (there's always more pleasure to be had)
+
+Drafts:
+
+* [Write a plan](#write-a-plan) to reduce the pain
+* Execute the plan to reduce the pain
 
 ### Solve a task
-
-Input: [lifestyle](#lifestyle)
 
 * Ask yourself: "What do you want?"
 * Write down the answer
@@ -28,17 +77,12 @@ Input: [lifestyle](#lifestyle)
     * Just do it
   * Else
     * [Write a plan](#write-a-plan)
-* Else
-  *
+
+Drafts:
 
 * Determine the type of the task
   * [Easy](#easy-task): do it without a plan
   * [Complex](#complex-task): don't do it
-  * Other:
-
-Notes:
-
-* Dukkha -> Images -> Plan -> Execution
 
 ### Write a plan
 
@@ -96,6 +140,12 @@ Notes:
   * Imagine a value (timeout: 10 minutes)
   * Use an [empty value](#empty-value)
   * Use a [default value](#default-value)
+
+### Write an estimator
+
+* If you need to estimate an object whose internal structure can't be learned in a short time, don't write an estimator: instead implement a try-each algorithm
+  * Examples
+    * Estimator for business strategies
 
 ### Refine the type
 
@@ -168,9 +218,36 @@ Notes:
 
 ### Pain
 
-A bad feeling.
+A bad feeling / thought / emotion.
 
-This definition is intentionally vague, because most
+* Corresponds to "dukkha" in Buddhism
+* It's intentionally vague because it can manifest in a lot of different ways, but it's always something that you don't want.
+
+### Block
+
+A psychological state you don't want to take action.
+
+Notes:
+
+* Blocks have two forms:
+  * zero-block: you have zero actions to choose from.
+  * many-block: you have many actions to choose from (a special case of zero-block where you have zero actions for writing a selector function).
+    * The "Keep Typing" system gives you prebuilt selectors + heuristics to choose them.
+
+### Formalisation
+
+Formalisation is a process of finding a constructive model of an object.
+
+A constructive model is a plan - a sequence of actions that is required to construct an object.
+
+Definition options:
+
+* A process of finding a satisfying model of an object
+  * A process of finding a plan to construct an object
+* A process of writing a type definition
+* A process of writing expressions in a formal logical system
+  * Formal logic ensures that your logic is correct as long as your axioms are correct
+  * People have little doubt about axioms (minimum pain)
 
 ### Easy task
 
@@ -370,12 +447,54 @@ Examples:
 * I need a car
 * I need a function that returns a list of square roots
 
-### Lifestyle
+### Patch
+
+An update of the function.
 
 Options:
 
-* Distribution of time between processes
-* Decision policy
+* A new function
+* A function from old function to new function
+  * Special case: a diff between the old & new function + an algorithm to apply the diff
+
+### Behavior
+
+Equivalent definitions:
+
+* A [policy](#policy) used by living beings (including humans).
+* A [policy](#policy) whose state space is the whole life.
+* A [policy](#policy) whose "state" type is equal to "Life".
+
+Notes:
+
+* Life is modelled as POMDP - [Partially Observable Markov Decision Process](https://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process).
+* Life is the ultimate game
+  * Board games are reductions of life
+
+### Policy
+
+A function from state to probability distribution on actions.
+
+See also:
+
+* [Deterministic policy](#deterministic-policy)
+
+### Deterministic policy
+
+A [policy](#policy) that outputs a probability distribution with a single action (100% probability).
+
+### Desc
+
+A string description of something.
+
+Notes:
+
+* May be incomplete
+
+Examples:
+
+* "one" is a string description of a number 1
+* "function with two arguments" is a string description of a function `add`
 
 ## Drafts
 
@@ -512,7 +631,7 @@ Notes 6 (synonyms):
 * "make" is faster for creative tasks
 * "find" is faster for non-creative tasks
 
-## Goal
+### Goal
 
 Options:
 
@@ -537,31 +656,44 @@ Decision:
   * If possible, write Lean terms immediately
 * Write a computer program using the human program as input
 
+### Timing
+
+All [blocks](#block) have a required condition: the person feels that they don't have enough time. Maybe we can resolve the blocks by removing this feeling. If the person feels they have enough time, they can resolve the block by spending more time: simply try again, or find more examples, or ask other people for advice. So how do we remove this feeling?
+
+First, let's rename the "feeling of lack of time" to "pressure".
+
+Second, let's ask a question: what exactly the person doesn't have enough time for? It is "to take an action that has a higher chance to resolve their pain". For example, the person might feel that they don't have enough time to learn a new profession in order to make more money, so they decide to buy a lottery ticket (which takes less time).
+
+"Lack of time" is a special case of "lack of resources".
+
+### Resolve the "No Good Moves" block
+
+* Examples
+  * Can't write an article
+  * Can't choose a theme
+  * Can't decide on a business model
+  * Can't decide on a way to transfer the money
+* General form description
+  * You're moving towards the city
+  * You arrive at a river which flows between you & the city
+  * You start looking for a way to cross the river
+  * You estimate that you could cross it by swimming, but you'll get wet, and you're not sure if you'll have enough stamina to actually cross it
+    * Should you swim or should you look for a bridge?
+* General form
+  * An agent is moving through a maze
+  * Each step has a cost (multiple resources)
+  * Some steps have a reward (multiple resources)
+  * The agent doesn't know the costs & rewards upfront, but he can ask other agents for estimates
+* Features
+  * Doesn't have a definite timeout
+  * Has a "learn more" action (aka "get more samples", aka "continue searching")
+* Options
+  * Flounder (continue generating options)
+    * But need to settle on the option
+  * Learn the distribution -> Choose an option that is an outlier of the distribution
+    * Realize that sometimes you need to make a choice to learn the distribution
+
 ## TODO
 
-* Find an algorithm for "No Good Moves" situation
-  * Examples
-    * Can't write an article
-    * Can't choose a theme
-    * Can't decide on a business model
-    * Can't decide on a way to transfer the money
-  * General form description
-    * You're moving towards the city
-    * You arrive at a river which flows between you & the city
-    * You start looking for a way to cross the river
-    * You estimate that you could cross it by swimming, but you'll get wet and you're not sure if you'll have enough stamina to actually cross it
-      * Should you swim or should you look for a bridge?
-  * General form
-    * An agent is moving through a maze
-    * Each step has a cost (multiple resources)
-    * Some steps have a reward (multiple resources)
-    * The agent doesn't know the costs & rewards upfront, but he can ask other agents for estimates
-  * Features
-    * Doesn't have a definite timeout
-    * Has a "learn more" action (aka "get more samples", aka "continue searching")
-  * Options
-    * Flounder (continue generating options)
-      * But need to settle on the option
-    * Learn the distribution -> Choose an option that is an outlier of the distribution
 * Merge with [How to make decisions](HowToMakeDecisions.md)
 * Merge with [Decimaker](Decimaker.md)
