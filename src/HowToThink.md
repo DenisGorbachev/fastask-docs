@@ -673,20 +673,26 @@ Second, let's ask a question: what exactly the person doesn't have enough time f
   * Can't choose a theme
   * Can't decide on a business model
   * Can't decide on a way to transfer the money
-* General form description
-  * You're moving towards the city
-  * You arrive at a river which flows between you & the city
-  * You start looking for a way to cross the river
-  * You estimate that you could cross it by swimming, but you'll get wet, and you're not sure if you'll have enough stamina to actually cross it
-    * Should you swim or should you look for a bridge?
-* General form
-  * An agent is moving through a maze
-  * Each step has a cost (multiple resources)
-  * Some steps have a reward (multiple resources)
-  * The agent doesn't know the costs & rewards upfront, but he can ask other agents for estimates
+* General forms:
+  * Moving towards the city
+    * You're moving towards the city
+    * You arrive at a river which flows between you & the city
+    * You start looking for a way to cross the river
+    * You estimate that you could cross it by swimming, but you'll get wet, and you're not sure if you'll have enough stamina to actually cross it
+      * Should you swim or should you look for a bridge?
+  * Moving through a maze
+    * An agent is moving through a maze
+    * Each step has a cost (multiple resources)
+    * Some steps have a reward (multiple resources)
+    * The agent doesn't know the costs & rewards upfront, but he can ask other agents for estimates
 * Features
   * Doesn't have a definite timeout
   * Has a "learn more" action (aka "get more samples", aka "continue searching")
+* Notes
+  * Arises when we extrapolate a distribution of options from our experiences in situations that are systemically different from the current one
+    * Example
+      * A person lives in a 5-star hotel
+      * A person can't choose between 3-star hotels because he implicitly continues looking for a 5-star hotel
 * Options
   * Flounder (continue generating options)
     * But need to settle on the option
