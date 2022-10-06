@@ -43,21 +43,26 @@ In fact, we're always writing programs (just very simple ones). For example, a s
 Mistakes:
 
 * Making an intuitive decision if you know there is an algorithm for making a better-than-intuitive decision that meets your resource limits and improves the decision in a way that allows you to recoup the resource costs & make even more resources (a "profitable" algorithm)
-* Making imprecise requests
   * Examples
+    * Guessing a solution to a quadratic equation
+* Making imprecise requests
+  * Examples of imprecise requests
     * Draw a beautiful picture
     * Make a high-quality product
-  * Counterexamples
+  * Examples of precise requests
     * Show your best product ("best" is subjective, but the request allows the executor to use his judgement)
     * Draw a square (does not specify the size, but does specify the shape)
   * Notes
     * Every filter in the request must have a precise definition in the current language
 * Not making an intuitive decision if you know there is no algorithm for making a better-than-intuitive decision
+* Making a decision to make intuitive decisions in a domain where negative returns are possible
+  * Examples
+    * Deciding to engage in day-trading stocks based on emotions
 
 Not mistakes:
 
 * Making experiments (aka "getting data")
-* Saying "I don't know"
+* Admitting that you don't know something
 
 ## Axioms
 
