@@ -35,6 +35,7 @@ module.exports = {
         'balanced': true,
       },
     }],
+    'generator-star-spacing': ['error', {'before': true, 'after': true}],
     'space-before-function-paren': ['error', { 'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always' }],
     'function-paren-newline': ['error', 'multiline-arguments'],
     'no-multiple-empty-lines': ['error', { max: 1 }],

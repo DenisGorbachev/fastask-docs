@@ -38,6 +38,27 @@ Your logical part tells you there must be a natural way. But your emotional part
 
 In fact, we're always writing programs (just very simple ones). For example, a shopping list is a very simple, crude program. It doesn't use a formal language, and it doesn't use any advanced mental constructs (like probability distributions of product quality). However, it's a plan nonetheless. We always write programs. We rarely write **formal** programs. Yet formal programs are what we need to resolve the blocks.
 
+### Mistakes
+
+Mistakes:
+
+* Making an intuitive decision if you know there is an algorithm for making a better-than-intuitive decision that meets your resource limits and improves the decision in a way that allows you to recoup the resource costs & make even more resources (a "profitable" algorithm)
+* Making imprecise requests
+  * Examples
+    * Draw a beautiful picture
+    * Make a high-quality product
+  * Counterexamples
+    * Show your best product ("best" is subjective, but the request allows the executor to use his judgement)
+    * Draw a square (does not specify the size, but does specify the shape)
+  * Notes
+    * Every filter in the request must have a precise definition in the current language
+* Not making an intuitive decision if you know there is no algorithm for making a better-than-intuitive decision
+
+Not mistakes:
+
+* Making experiments (aka "getting data")
+* Saying "I don't know"
+
 ## Axioms
 
 * There is [pain](#pain)
