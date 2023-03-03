@@ -1,5 +1,11 @@
 # How to think
 
+## Motto
+
+When in doubt, think.
+
+When your thoughts become stable, act.
+
 ## Stories
 
 ### Keep Typing
@@ -39,6 +45,13 @@ Your logical part tells you there must be a natural way. But your emotional part
 In fact, we're always writing programs (just very simple ones). For example, a shopping list is a very simple, crude program. It doesn't use a formal language, and it doesn't use any advanced mental constructs (like probability distributions of product quality). However, it's a plan nonetheless. We always write programs. We rarely write **formal** programs. Yet formal programs are what we need to resolve the blocks.
 
 ### Mistakes
+
+Most mistakes arise from a combination of two factors:
+
+* You prefer a smaller reward now to a larger reward later.
+* You know that the sum of smaller rewards up to "later" is less than the larger reward.
+
+Essentially, "mistakes" are incorrect estimates of cumulative rewards over multiple applications of the same strategy.
 
 Mistakes:
 
